@@ -6,7 +6,7 @@ const my_name = document.getElementById("my-name");
 const word_programmer = document.getElementById("word-programmer");
 const navbar = document.querySelector(".navbar");
 const navbarMenu = document.querySelector(".navbar .menu");
-const menuBtn = document.querySelector(".navbar .menu-btn");
+const hamburger = document.querySelector(".navbar .hamburger");
 
 // "Patrick Hu" on mouse over
 my_name.onclick = (event) => {
@@ -30,12 +30,12 @@ const navbarOnScroll = () => {
 }
 window.onscroll = navbarOnScroll;
 
-// navbar button click
+// hamburger on-click
 let btn_active = false;
-menuBtn.addEventListener("click", (event) => {
+hamburger.addEventListener("click", (event) => {
    btn_active = !btn_active;
    navbarMenu.style.left = btn_active ? 0 : "-100%";
-   document.querySelector(".navbar .menu-btn i").className = btn_active
+   document.querySelector(".navbar .hamburger i").className = btn_active
       ? "fas fa-times"
       : "fas fa-bars";
 });
