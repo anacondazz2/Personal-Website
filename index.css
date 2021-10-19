@@ -43,15 +43,22 @@
    background-color: var(--blue);
 }
 
+/* TOGGLES */
+.navbar.darken {
+   padding: 25px 55px;
+   background-color: rgba(66, 66, 66, 0.75);
+}
+
 /* NAVBAR */
 .navbar {
-   width: 100%;
-   padding: 40px 55px;
-   transition: all 0.3s ease;
+   width: 100vw;
+   padding: 30px 55px;
    position: fixed;
    display: flex;
    justify-content: space-between;
    align-items: center;
+   z-index: 999;
+   transition: padding 0.3s ease, background-color 0.3s ease;
 }
 .navbar .resume {
    width: 100px;
@@ -63,14 +70,13 @@
    border-style: none;
    border: 2px solid var(--orange);
    cursor: pointer;
-   transition: all 0.7s ease;
+   transition: background-color 0.7s ease, color 0.7s ease;
 }
 .navbar .resume:hover {
    background-color: var(--orange);
    color: black;
    font-weight: 600;
 }
-
 .navbar .menu li {
    margin-right: 30px;
    display: inline-block;
@@ -78,7 +84,7 @@
 }
 .navbar .menu li a {
    font-size: 20px;
-   transition: color 0.3s ease;
+   transition: all 0.3s ease;
    color: white;
 }
 .navbar .menu li a:hover {
@@ -229,8 +235,7 @@
    left: 50%;
    transform: translate(-50%, -50%);
    width: 80%;
-   flex-direction: column;
-   text-align: center   ;
+   text-align: center;
    color: white;
    opacity: 0;
    transition: all 0.5s ease;
@@ -286,24 +291,29 @@
    }
 }
 @media (max-width: 700px) {
-   /* show hamburger */
+   /* show hamburger, make navbar dropdown */
+   .hamburger {
+      display: block; /*make the btn visible*/
+   }
    .navbar .menu {
-      position: fixed;
-      height: 300px;
-      width: 100%;
-      top: 0;
+      position: absolute;
+      top: 100%;
       left: 0;
-      display: flex;
-      flex-direction: column;
-      background: black;
-      transition: all 0.3s ease;
+      width: 100vw;
+      height: 0;
+      overflow: hidden;
+      padding-left: inherit;
+      background-color: rgba(66, 66, 66, 0.75);
+      transition: height 0.5s ease, border 0.5s ease;
    }
    .navbar .menu li {
-      margin-bottom: 20px;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 15px;
    }
-   .hamburger {
-      display: block; /* make the btn visible */
-      z-index: 999;
+   .navbar .menu.dropdown {
+      border-top: 5px solid rgba(37, 37, 37, 0.75);
+      height: 180px;
    }
    .about-left .pfp {
       width: 210px;
