@@ -21,7 +21,7 @@ hamburger.addEventListener("click", (event) => {
 
 // on scroll
 const navbarOnScroll = () => {
-   if (window.scrollY > 10 || burger_active) {
+   if (window.scrollY > 40 || burger_active) {
       navbar.classList.add("darken");
    } else {
       navbar.classList.remove("darken");

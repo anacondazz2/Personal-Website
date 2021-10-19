@@ -48,6 +48,10 @@
    padding: 25px 55px;
    background-color: rgba(66, 66, 66, 0.75);
 }
+.navbar .menu.dropdown {
+   border-top: 5px solid rgba(37, 37, 37, 0.75);
+   height: 180px;
+}
 
 /* NAVBAR */
 .navbar {
@@ -242,7 +246,15 @@
 }
 .projects-container figcaption h2 {
    text-decoration: underline;
-}  
+}
+
+/* CONTACT */
+.contact {
+   padding-top: 50px;
+   padding-bottom: 70px;
+   background-color: var(--pro-grey);
+   border-bottom: 7px solid black;
+}
 
 
 /* MEDIA QUERIES */
@@ -310,10 +322,6 @@
       display: block;
       margin-top: 15px;
       margin-bottom: 15px;
-   }
-   .navbar .menu.dropdown {
-      border-top: 5px solid rgba(37, 37, 37, 0.75);
-      height: 180px;
    }
    .about-left .pfp {
       width: 210px;
