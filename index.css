@@ -48,10 +48,6 @@
    padding: 25px 55px;
    background-color: rgba(66, 66, 66, 0.75);
 }
-.navbar .menu.dropdown {
-   border-top: 5px solid rgba(37, 37, 37, 0.75);
-   height: 180px;
-}
 
 /* NAVBAR */
 .navbar {
@@ -262,12 +258,14 @@
    width: 50%;
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 .contact-info div { /*each contact item*/
    display: flex;
    align-items: center;
+   font-size: 18px;
    color: white;
-   font-size: 17px;
    margin-bottom: 15px;
 }
 .contact-info .email a, .contact-info .phone-number p {
@@ -278,9 +276,24 @@
    text-decoration: underline;
 }
 .contact-info .social-media a {
-   font-size: 30px;
+   font-size: 35px;
    margin-right: 20px;
    color: white;
+}
+.contact-info .social-media i {
+   transition: color 0.3s ease;
+}
+.contact-info .social-media .fa-discord:hover {
+   color: #7289DA;
+}
+.contact-info .social-media .fa-github:hover {
+   color: black;
+}
+.contact-info .social-media .fa-linkedin-in:hover {
+   color: #2867B2;
+}
+.contact-info .social-media .fa-instagram:hover {
+   color: #DD2A7B;
 }
 
 .contact .form {
@@ -296,9 +309,12 @@
    margin-bottom: 30px;
 }
 .form .input {
+   font-size: 15px;
+   border-radius: 15px;
+   border-style: none;
    margin-bottom: 10px;
-   width: 400px;
-   padding: 10px;
+   width: 80%;
+   padding: 15px;
 }
 
 
@@ -350,7 +366,7 @@
 @media (max-width: 700px) {
    /* show hamburger, make navbar dropdown */
    .hamburger {
-      display: block; /*make the btn visible*/
+      display: block; /*make burger visible*/
    }
    .navbar .menu {
       position: absolute;
@@ -367,6 +383,11 @@
       display: block;
       margin-top: 15px;
       margin-bottom: 15px;
+   }
+   /* dropdown class can only be defined here so that it's gone when screen size changes */
+   .navbar .menu.dropdown {
+      border-top: 5px solid rgba(37, 37, 37, 0.75);
+      height: 180px;
    }
    .about-left .pfp {
       width: 210px;
