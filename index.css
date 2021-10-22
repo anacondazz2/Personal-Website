@@ -205,7 +205,7 @@
 .portfolio {
    padding-top: 50px;
    padding-bottom: 70px;
-   background-color: var(--pro-grey);
+   background-color: var(--blue);
    border-bottom: 7px solid black;
 }
 .projects-container {
@@ -248,73 +248,102 @@
 .contact {
    padding-top: 50px;
    padding-bottom: 70px;
+   /* background: repeating-linear-gradient(
+      45deg,
+   rgb(153, 153, 153),
+   rgb(153, 153, 153) 20px,
+   rgb(75, 74, 74) 20px,
+   rgb(75, 74, 74) 40px
+   ); */
    background-color: var(--pro-grey);
    border-bottom: 7px solid black;
 }
-.contact .content-wrapper {
+.contact-container {
    display: flex;
 }
-.contact-info {
+.contact-left {
    width: 50%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
-.contact-info div { /*each contact item*/
+.contact-left div { /*each contact item*/
    display: flex;
    align-items: center;
    font-size: 18px;
    color: white;
    margin-bottom: 15px;
 }
-.contact-info .email a, .contact-info .phone-number p {
+.contact-left .email a, .contact-left .phone-number p {
    color: white;
    margin-left: 10px;
 }
-.contact-info .email a:hover {
+.contact-left .email a:hover {
    text-decoration: underline;
 }
-.contact-info .social-media a {
+.contact-left .social-media a {
    font-size: 35px;
    margin-right: 20px;
    color: white;
 }
-.contact-info .social-media i {
+.contact-left .social-media i {
    transition: color 0.3s ease;
 }
-.contact-info .social-media .fa-discord:hover {
+.contact-left .social-media .fa-discord:hover {
    color: #7289DA;
 }
-.contact-info .social-media .fa-github:hover {
+.contact-left .social-media .fa-github:hover {
    color: black;
 }
-.contact-info .social-media .fa-linkedin-in:hover {
+.contact-left .social-media .fa-linkedin-in:hover {
    color: #2867B2;
 }
-.contact-info .social-media .fa-instagram:hover {
+.contact-left .social-media .fa-instagram:hover {
    color: #DD2A7B;
 }
 
-.contact .form {
+.contact-right {
    width: 50%;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-.contact .form .description {
+.contact-right .description {
    font-size: 20px;
    text-align: center;
    color: white;
    margin-bottom: 30px;
 }
-.form .input {
+.contact-right form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.contact-right form .input {
+   width: 35vw;
    font-size: 15px;
-   border-radius: 15px;
+   border-radius: 20px;
    border-style: none;
    margin-bottom: 10px;
-   width: 80%;
    padding: 15px;
+}
+.contact-right form textarea {
+   resize: vertical;
+}
+.contact-right button {
+   width: max-content;
+   padding: 13px;
+   border-style: none;
+   border-radius: 24px;
+   border: 3px solid var(--blue);
+   transition: all 0.3s ease;
+}
+.contact-right button:hover {
+   color: white;
+   font-weight: 600;
+   background-color: var(--blue);
+   cursor: pointer;
 }
 
 
@@ -337,7 +366,6 @@
    .about-left .my-description {
       max-width: 700px;
    }
-
    .about-right {
       width: 100%;
    }
@@ -350,6 +378,21 @@
    /* wrap projects */
    .projects-container {
       grid-template-columns: 40vw 40vw;
+   }
+
+   /* wrap contact section */
+   .contact-container {
+      flex-direction: column;
+   }
+   .contact-left {
+      width: 100%;
+      margin-bottom: 50px;
+   }
+   .contact-right {
+      width: 100%;
+   }
+   .contact-right form .input {
+      width: 60vw;
    }
 }
 @media (max-width: 900px) {
