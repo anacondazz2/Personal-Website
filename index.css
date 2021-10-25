@@ -14,10 +14,16 @@
    text-decoration: none;
    font-family: "Inter", "Ubuntu", sans-serif;
 }
+html {
+   scroll-behavior: smooth;
+}
+:target {
+   scroll-margin-top: 70px;
+}
 
 /* REUSABLES */
 .resize-padding {
-   padding: 0 40px;  /* left and right padding needed when width shrinks */
+   padding: 0 40px; /* left and right padding needed when width shrinks */
 }
 .flex-center {
    display: flex;
@@ -33,6 +39,7 @@
 .header {
    font-size: 40px;
    font-weight: 500;
+   text-align: center;
    color: white;
 }
 .header-bar {
@@ -42,11 +49,17 @@
    height: 5px;
    background-color: var(--blue);
 }
+.dark-overlay {
+   position: absolute;
+   height: 100vh;
+   width: 100%;
+   background-color: rgb(0, 0, 0, 0.6);
+}
 
 /* TOGGLES */
 .navbar.darken {
    padding: 25px 55px;
-   background-color: rgba(66, 66, 66, 0.75);
+   background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* NAVBAR */
@@ -61,21 +74,20 @@
    transition: padding 0.3s ease, background-color 0.3s ease;
 }
 .navbar .resume {
-   width: 100px;
-   height: 40px;
+   width: max-content;
+   padding: 12px;
    border-radius: 25px;
    font-size: 17px;
-   color: white;
+   color: white;  
    background-color: transparent;
    border-style: none;
    border: 2px solid var(--orange);
    cursor: pointer;
-   transition: background-color 0.7s ease, color 0.7s ease;
+   transition: all 0.5s ease;
 }
 .navbar .resume:hover {
    background-color: var(--orange);
    color: black;
-   font-weight: 600;
 }
 .navbar .menu li {
    margin-right: 30px;
@@ -89,6 +101,7 @@
 }
 .navbar .menu li a:hover {
    color: var(--orange);
+   font-size: 22px;
 }
 .hamburger {
    font-size: 20px;
@@ -99,9 +112,7 @@
 
 /* HOME */
 .home {
-   color: white;
    height: 100vh;
-   min-height: 500px;
    background: url(images/color_adventure.jpg) no-repeat fixed center;
    background-size: cover;
 }
@@ -109,18 +120,18 @@
    font-size: 50px;
    font-weight: 450;
    text-align: center;
-   transition: all 0.3s ease;
+   color: white;
    user-select: none;
 }
 .welcome-text #my-name {
    opacity: 0;
    color: var(--blue);
-   transition: all 0.7s ease;
+   transition: opacity 0.7s ease;
 }
 .welcome-text #word-programmer {
    opacity: 0;
    color: var(--blue);
-   transition: all 0.7s ease;
+   transition: opacity 0.7s ease;
 }
 
 /* ABOUT */
@@ -128,8 +139,8 @@
    padding-top: 70px;
    padding-bottom: 70px;
    background-color: var(--pro-grey);
-   border-top: 7px solid black;
-   border-bottom: 7px solid black;
+   border-top: 5px solid black;
+   border-bottom: 5px solid black;
 }
 .about-container {
    display: flex;
@@ -163,9 +174,10 @@
 }
 .about-right .skills-description {
    font-size: 18px;
+   text-align: center;
    color: white;
    margin-bottom: 15px;
-}  
+}
 .skill-container {
    display: flex;
    margin-bottom: 15px;
@@ -196,17 +208,17 @@
 }
 .percentage {
    display: flex;
-   align-items: center;  /*vert. align text*/
+   align-items: center; /*vert. align text*/
    margin-left: 8px;
    color: white;
 }
 
 /* PORTFOLIO */
 .portfolio {
-   padding-top: 50px;
+   padding-top: 70px;
    padding-bottom: 70px;
-   background-color: var(--blue);
-   border-bottom: 7px solid black;
+   background-color: rgb(82, 82, 82);
+   border-bottom: 5px solid black;
 }
 .projects-container {
    display: grid;
@@ -220,14 +232,15 @@
    max-width: 100%;
    height: auto;
    object-fit: cover;
-   border: 3px solid black;
+   border-radius: 30px;
+   border: 1px solid black;
    transition: all 0.5s ease;
 }
-.projects-container a:hover img{
-   opacity: 0.25;
+.projects-container a:hover img {
+   filter: brightness(50%);
 }
-.projects-container a:hover figcaption{
-   opacity: 1; 
+.projects-container a:hover figcaption {
+   opacity: 1;
 }
 .projects-container figcaption {
    position: absolute;
@@ -246,17 +259,10 @@
 
 /* CONTACT */
 .contact {
-   padding-top: 50px;
+   padding-top: 70px;
    padding-bottom: 70px;
-   /* background: repeating-linear-gradient(
-      45deg,
-   rgb(153, 153, 153),
-   rgb(153, 153, 153) 20px,
-   rgb(75, 74, 74) 20px,
-   rgb(75, 74, 74) 40px
-   ); */
    background-color: var(--pro-grey);
-   border-bottom: 7px solid black;
+   border-bottom: 5px solid black;
 }
 .contact-container {
    display: flex;
@@ -268,14 +274,16 @@
    justify-content: center;
    align-items: center;
 }
-.contact-left div { /*each contact item*/
+.contact-left div {
+   /*each contact item*/
    display: flex;
    align-items: center;
    font-size: 18px;
    color: white;
    margin-bottom: 15px;
 }
-.contact-left .email a, .contact-left .phone-number p {
+.contact-left .email a,
+.contact-left .phone-number p {
    color: white;
    margin-left: 10px;
 }
@@ -283,24 +291,27 @@
    text-decoration: underline;
 }
 .contact-left .social-media a {
-   font-size: 35px;
    margin-right: 20px;
    color: white;
 }
 .contact-left .social-media i {
-   transition: color 0.3s ease;
+   font-size: 35px;
+   transition: all 0.3s ease;
+}
+.contact-left .social-media i:hover {
+   font-size: 40px;
 }
 .contact-left .social-media .fa-discord:hover {
-   color: #7289DA;
+   color: #7289da;
 }
 .contact-left .social-media .fa-github:hover {
    color: black;
 }
 .contact-left .social-media .fa-linkedin-in:hover {
-   color: #2867B2;
+   color: #2867b2;
 }
 .contact-left .social-media .fa-instagram:hover {
-   color: #DD2A7B;
+   color: #dd2a7b;
 }
 
 .contact-right {
@@ -332,20 +343,52 @@
    resize: vertical;
 }
 .contact-right button {
+   font-size: 15px;
    width: max-content;
    padding: 13px;
    border-style: none;
    border-radius: 24px;
    border: 3px solid var(--blue);
+   background-color: transparent;
+   color: white;
    transition: all 0.3s ease;
 }
 .contact-right button:hover {
-   color: white;
+   color: black;
    font-weight: 600;
    background-color: var(--blue);
    cursor: pointer;
 }
 
+/* FOOTER */
+.footer {
+   height: 100vh;
+   background: url(images/fantasy_wallpaper.jpg) no-repeat fixed center;
+   background-size: cover;
+}
+.footer .goodbye-text {
+   font-size: 50px;
+   font-weight: 450;
+   text-align: center;
+   color: white;
+   user-select: none;
+}
+.footer .art-credit {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   font-size: 18px;
+   font-weight: 500;
+   color: white;
+}
+.footer .art-credit a {
+   color: white;
+   transition: all 0.5s ease;
+}
+.footer .art-credit a:hover {
+   color: rgb(216, 97, 255);
+   text-decoration: underline;
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 1400px) {
@@ -419,7 +462,7 @@
       height: 0;
       overflow: hidden;
       padding-left: inherit;
-      background-color: rgba(66, 66, 66, 0.75);
+      background-color: rgba(0, 0, 0, 0.75);
       transition: height 0.5s ease, border 0.5s ease;
    }
    .navbar .menu li {
@@ -429,7 +472,7 @@
    }
    /* dropdown class can only be defined here so that it's gone when screen size changes */
    .navbar .menu.dropdown {
-      border-top: 5px solid rgba(37, 37, 37, 0.75);
+      border-top: 5px solid rgba(255, 255, 255, 0.75);
       height: 180px;
    }
    .about-left .pfp {

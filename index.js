@@ -2,6 +2,7 @@
  */
 
 // grab needed elements
+const html = document.querySelector("html");
 const my_name = document.getElementById("my-name");
 const word_programmer = document.getElementById("word-programmer");
 const navbar = document.querySelector(".navbar");
@@ -21,13 +22,19 @@ hamburger.addEventListener("click", (event) => {
 
 // on scroll
 const navbarOnScroll = () => {
-   if (window.scrollY > 40 || burger_active) {
+   // console.log("scroll height", html.scrollHeight);
+   // console.log("scroll top", html.scrollTop);
+   // console.log("client height", html.clientHeight);
+
+   if (Math.abs(html.scrollHeight - html.scrollTop - html.clientHeight) <= 3.0) {
+      navbar.classList.remove("darken");
+   } else if (window.scrollY > 40 || burger_active) {
       navbar.classList.add("darken");
    } else {
       navbar.classList.remove("darken");
    }
 };
-window.onscroll = navbarOnScroll;    
+window.onscroll = navbarOnScroll;
 
 // "Patrick Hu" on mouse over
 my_name.onclick = (event) => {

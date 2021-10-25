@@ -7,7 +7,7 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
 -->
 
 <!-- Next to do:
-backend for email messages -->
+make resume pdf and link it -->
 
 <head>
    <meta charset="UTF-8">
@@ -24,27 +24,29 @@ backend for email messages -->
          <i class="fas fa-bars"></i>
       </div>
       <ul class="menu">
-         <li><a href="#">Home</a></li>
-         <li><a href="#">About</a></li>
-         <li><a href="#">Portfolio</a></li>
-         <li><a href="#">Contact</a></li>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#portfolio">Portfolio</a></li>
+         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="https://docs.google.com/document/d/1diD0AljJL-uau7xUezFbF-jqt735RIFywWYy0BiPaNg/edit?usp=sharing" target="_blank">
          <button class="resume">
-            Resumé
+            My Resumé
          </button>
       </a>
    </nav>
 
    <!-- HOME -->
-   <section class="home flex-center resize-padding">
-      <p class="welcome-text">
-         Welcome, I'm <span id="my-name">Patrick Hu</span>.<br>I'm a <span id="word-programmer">programmer</span>.
-      </p>
+   <section class="home" id="home">
+      <div class="dark-overlay flex-center resize-padding">
+         <p class="welcome-text">
+            Welcome, I'm <span id="my-name">Patrick Hu</span>.<br>I like to <span id="word-programmer">program</span>.
+         </p>
+      </div>
    </section>
 
    <!-- ABOUT -->
-   <section class="about resize-padding">
+   <section class="about resize-padding" id="about">
       <div class="about-header flex-col-center">
          <p class="header">ABOUT</p>
          <div class="header-bar"></div>
@@ -70,11 +72,19 @@ backend for email messages -->
                </div>
    
                <div class="skill-container">
-                  <div class="bar">
-                     <div class="bar-fill" style="width: 75%"><span class="skill flex-center">HTML</span></div>
-                     <span class="bar-rest" style="width: 25%;"></span>
+                  <div class="bar flex-row-align">
+                     <div class="bar-fill" style="width: 90%"><span class="skill flex-center">CSS</span></div>
+                     <span class="bar-rest" style="width: 10%;"></span>
                   </div>
-                  <span class="percentage">75%</span>
+                  <span class="percentage">90%</span>
+               </div>
+   
+               <div class="skill-container">
+                  <div class="bar">
+                     <div class="bar-fill" style="width: 80%"><span class="skill flex-center">HTML</span></div>
+                     <span class="bar-rest" style="width: 20%;"></span>
+                  </div>
+                  <span class="percentage">80%</span>
                </div>
                
                <div class="skill-container">
@@ -82,15 +92,7 @@ backend for email messages -->
                      <div class="bar-fill" style="width: 75%"><span class="skill flex-center">JS</span></div>
                      <span class="bar-rest" style="width: 25%;"></span>
                   </div>
-                  <span class="percentage"">75%</span>
-               </div>
-   
-               <div class="skill-container">
-                  <div class="bar flex-row-align">
-                     <div class="bar-fill" style="width: 70%"><span class="skill flex-center">CSS</span></div>
-                     <span class="bar-rest" style="width: 30%;"></span>
-                  </div>
-                  <span class="percentage"">70%</span>
+                  <span class="percentage">75%</span>
                </div>
    
                <div class="skill-container">
@@ -98,7 +100,7 @@ backend for email messages -->
                      <div class="bar-fill" style="width: 40%"><span class="skill flex-center">React</span></div>
                      <span class="bar-rest" style="width: 60%;"></span>
                   </div>
-                  <span class="percentage"">40%</span>
+                  <span class="percentage">40%</span>
                </div>
    
                <div class="skill-container">
@@ -106,7 +108,7 @@ backend for email messages -->
                      <div class="bar-fill" style="width: 30%"><span class="skill flex-center">Python</span></div>
                      <span class="bar-rest" style="width: 70%;"></span>
                   </div>
-                  <span class="percentage"">30%</span>
+                  <span class="percentage">30%</span>
                </div>
             </div>
          </div>
@@ -114,7 +116,7 @@ backend for email messages -->
    </section>
 
    <!-- PORTFOLIO -->
-   <section class="portfolio resize-padding">
+   <section class="portfolio resize-padding" id="portfolio">
       <div class="portfiolo-header flex-col-center">
          <p class="header">MY PROJECTS</p>
          <div class="header-bar"></div>
@@ -122,21 +124,21 @@ backend for email messages -->
       <div class="projects-wrapper flex-center">
          <div class="projects-container">
             <a href=#>
-               <img src="images/cropped/toDoList_cropped.png" alt="">
+               <img src="images/cropped/1x/Asset 6.png" alt="To do list project">
                <figcaption>
                   <h2>To Do List</h3><br>
                   <h4>A simple To Do List to prevent you from not completing the day's tasks!</h4>
                </figcaption>
             </a>
             <a href=#>
-               <img src="images/cropped/JS_calc_cropped.png" alt="">
+               <img src="images/cropped/1x/Asset 7.png" alt="JavaScript Calculator project">
                <figcaption>
                   <h2>JavaScript Calculator</h3><br>
                   <h4>A simple JS calculator with a nice look.</h4>
                </figcaption>
             </a>
             <a href=#>
-               <img src="images/cropped/ticTacToe_cropped.png" alt="">
+               <img src="images/cropped/1x/Asset 8.png" alt="React Tic-tac-toe project">
                <figcaption>
                   <h2>Tic Tac Toe</h3><br>
                   <h4>Not your average tic tac toe; travel through the game's history to analyze what you did wrong!</h4>
@@ -147,7 +149,7 @@ backend for email messages -->
    </section>
 
    <!-- CONTACT -->
-   <section class="contact resize-padding">
+   <section class="contact resize-padding" id="contact">
       <div class="contact-header flex-col-center">
          <p class="header">CONTACT</p>
          <div class="header-bar"></div>   
@@ -178,11 +180,11 @@ backend for email messages -->
                </a>
             </div>
          </div>
-         
          <div class="contact-right">
             <p class="description">
                Want to contact me through e-mail?<br>Here's a nicer experience:
             </p>
+            <!-- need hosting in order for form submission to work -->
             <form action="https://formsubmit.co/patrickhu360@outlook.com" method="POST">
                <input placeholder="Name" type="text" name="name" required class="input">
                <input placeholder="Email" type="email" name="name" required class="input">
@@ -191,12 +193,21 @@ backend for email messages -->
             </form>
          </div>
       </div>
-      
    </section>
 
-   <!-- Consider additional "about" information in the future (refer to Eddie's Get to Know Me) -->
+   <!-- FOOTER -->
+   <footer class="footer">
+      <div class="dark-overlay flex-center resize-padding">
+         <p class="goodbye-text">
+            See you next time.
+         </p>
+         <p class="art-credit">
+            Artwork by <a href="https://kvacm.artstation.com/" target="_blank">KVACM</a>!
+         </p>
+      </div>
+   </footer>
 
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam odio inventore cum ad in incidunt ipsum eveniet iure quibusdam. Eligendi necessitatibus quidem aperiam dolorem nihil quasi officia. Autem praesentium exercitationem veritatis laborum cum natus consequatur. Iste dolor facilis, commodi consectetur odio iure facere! Adipisci quos fuga modi sequi, similique, fugiat et quidem ea neque in aut ipsam mollitia iure animi reiciendis veritatis quae ab magnam veniam nobis! Quaerat, autem culpa laudantium harum mollitia voluptate suscipit pariatur. Unde assumenda impedit dolore sapiente cupiditate, sint suscipit. Voluptates nulla dolores ullam fugit ut, labore ea asperiores sit vel laborum commodi nemo eaque corrupti temporibus beatae odio consectetur illo voluptatem porro nostrum! Aliquam tenetur perferendis nam quia a quaerat ipsam ad nostrum consequatur iure architecto, dolores iusto deserunt odio id quam, excepturi dolore possimus consectetur. Doloremque nulla dolor tempora, aut voluptatum eveniet amet corrupti fuga, vero rerum repellat ratione, deserunt libero? Ea amet omnis repellendus minima. Impedit facere temporibus provident odio molestias velit eius. Eum dolores beatae voluptatibus laborum consectetur, tempora commodi voluptas voluptate. Rem eveniet id est nisi voluptas, alias aspernatur unde possimus magni sapiente placeat harum at corporis officia eligendi? Est, velit fugit illum nihil repellendus, aperiam numquam eveniet voluptas, neque soluta aliquam repellat adipisci! Beatae quam harum facilis quod eligendi ullam, repellat, non impedit totam quo consectetur consequatur! Fuga fugiat perferendis officiis amet molestiae deserunt eum recusandae mollitia sint non. Maxime in necessitatibus ipsum perspiciatis labore? Fugiat odio, quidem repellat quis expedita illo aut soluta minima iure nobis adipisci debitis facere quo molestiae amet magni dolorum quibusdam totam maiores nihil sapiente pariatur veritatis unde. Perferendis, saepe. Explicabo labore, sequi molestiae cum libero mollitia? Porro corrupti in recusandae animi voluptatem eligendi reprehenderit veritatis fugit quo repudiandae optio harum neque numquam maxime error, enim unde, nesciunt expedita? Consequuntur culpa commodi exercitationem aspernatur accusantium dolorem sint laboriosam dicta dolor est at fugit quasi maxime voluptatem quidem amet, hic impedit unde veritatis suscipit. Magnam illo fugiat laudantium quam laboriosam voluptates eum molestias minus, accusantium consequuntur quisquam vero? Eum dolorem iusto quos consectetur necessitatibus in voluptate, doloremque, error vel accusamus laborum repellat quas iure quasi quam maxime nesciunt veritatis id numquam! Molestias, tenetur, error quidem aperiam repudiandae, vitae sapiente dignissimos accusamus porro amet ea reiciendis perferendis ipsa tempore iusto minus! Facilis, aspernatur, non suscipit magni unde nam maiores consequuntur, natus molestiae debitis corrupti. Iusto porro aut, libero voluptas dignissimos quidem dolorem, animi, asperiores doloribus quae reiciendis quams vitae nulla ipsum sed omnis atque!</p>
+   <!-- Consider additional "about" information in the future (refer to Eddie's Get to Know Me) -->
 </body>
 
 <script src="index.js"></script>
