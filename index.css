@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
 
 :root {
-   --pro-grey: rgb(51, 51, 51);
+   --dark-grey: rgb(51, 51, 51);
    --blue: rgb(82, 200, 246);
+   --yellow: rgb(255, 242, 0);
    --orange: #ff6a00;
 }
 
@@ -16,9 +17,23 @@
 }
 html {
    scroll-behavior: smooth;
+   scrollbar-color: black;
+}
+body::-webkit-scrollbar {
+   width: 15px;
+}
+body::-webkit-scrollbar-track {
+   background: black;
+   box-shadow: -3px 0 5px black;
+}
+body::-webkit-scrollbar-thumb {
+   background-color: blueviolet;
 }
 :target {
    scroll-margin-top: 70px;
+}
+::selection {
+   background-color: black;
 }
 
 /* REUSABLES */
@@ -35,6 +50,15 @@ html {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+}
+.large-panel-text {
+   font-size: 50px;
+   font-weight: 450;
+   text-align: center;
+   color: white;
+   user-select: none;
+   opacity: 0;
+   transition: opacity 5s ease-in-out;
 }
 .header {
    font-size: 40px;
@@ -53,7 +77,7 @@ html {
    position: absolute;
    height: 100vh;
    width: 100%;
-   background-color: rgb(0, 0, 0, 0.6);
+   background-color: rgb(0, 0, 0, 0.5);
 }
 
 /* TOGGLES */
@@ -65,7 +89,7 @@ html {
 /* NAVBAR */
 .navbar {
    width: 100vw;
-   padding: 30px 55px;
+   padding: 40px 55px;
    position: fixed;
    display: flex;
    justify-content: space-between;
@@ -78,7 +102,7 @@ html {
    padding: 12px;
    border-radius: 25px;
    font-size: 17px;
-   color: white;  
+   color: white;
    background-color: transparent;
    border-style: none;
    border: 2px solid var(--orange);
@@ -88,6 +112,7 @@ html {
 .navbar .resume:hover {
    background-color: var(--orange);
    color: black;
+   font-weight: 500;
 }
 .navbar .menu li {
    margin-right: 30px;
@@ -100,10 +125,10 @@ html {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: var(--orange);
-   font-size: 22px;
+   color: violet;
+   font-size: 19.5px;
 }
-.hamburger {
+.hamburger.fas {
    font-size: 20px;
    cursor: pointer;
    color: white;
@@ -116,29 +141,12 @@ html {
    background: url(images/color_adventure.jpg) no-repeat fixed center;
    background-size: cover;
 }
-.welcome-text {
-   font-size: 50px;
-   font-weight: 450;
-   text-align: center;
-   color: white;
-   user-select: none;
-}
-.welcome-text #my-name {
-   opacity: 0;
-   color: var(--blue);
-   transition: opacity 0.7s ease;
-}
-.welcome-text #word-programmer {
-   opacity: 0;
-   color: var(--blue);
-   transition: opacity 0.7s ease;
-}
 
 /* ABOUT */
 .about {
    padding-top: 70px;
    padding-bottom: 70px;
-   background-color: var(--pro-grey);
+   background-color: var(--dark-grey);
    border-top: 5px solid black;
    border-bottom: 5px solid black;
 }
@@ -254,18 +262,20 @@ html {
    transition: all 0.5s ease;
 }
 .projects-container figcaption h2 {
-   text-decoration: underline;
+   display: inline-block;
+   padding: 10px;
+   margin-bottom: 8px;
+   border-radius: 12px;
+   color: black;
+   background-color: white;
 }
 
 /* CONTACT */
 .contact {
    padding-top: 70px;
    padding-bottom: 70px;
-   background-color: var(--pro-grey);
+   background-color: var(--dark-grey);
    border-bottom: 5px solid black;
-}
-.contact-container {
-   display: flex;
 }
 .contact-left {
    width: 50%;
@@ -297,9 +307,6 @@ html {
 .contact-left .social-media i {
    font-size: 35px;
    transition: all 0.3s ease;
-}
-.contact-left .social-media i:hover {
-   font-size: 40px;
 }
 .contact-left .social-media .fa-discord:hover {
    color: #7289da;
@@ -333,11 +340,13 @@ html {
 }
 .contact-right form .input {
    width: 35vw;
-   font-size: 15px;
+   font-size: 17px;
    border-radius: 20px;
    border-style: none;
    margin-bottom: 10px;
    padding: 15px;
+   background-color: black ;
+   color: blueviolet;
 }
 .contact-right form textarea {
    resize: vertical;
@@ -347,16 +356,16 @@ html {
    width: max-content;
    padding: 13px;
    border-style: none;
-   border-radius: 24px;
-   border: 3px solid var(--blue);
+   border-radius: 30px;
+   border: 4px solid black;
    background-color: transparent;
-   color: white;
+   color: lightgrey;
    transition: all 0.3s ease;
 }
 .contact-right button:hover {
-   color: black;
+   color: blueviolet;
    font-weight: 600;
-   background-color: var(--blue);
+   background-color: black;
    cursor: pointer;
 }
 
@@ -365,13 +374,6 @@ html {
    height: 100vh;
    background: url(images/fantasy_wallpaper.jpg) no-repeat fixed center;
    background-size: cover;
-}
-.footer .goodbye-text {
-   font-size: 50px;
-   font-weight: 450;
-   text-align: center;
-   color: white;
-   user-select: none;
 }
 .footer .art-credit {
    position: absolute;
@@ -451,7 +453,7 @@ html {
 }
 @media (max-width: 700px) {
    /* show hamburger, make navbar dropdown */
-   .hamburger {
+   .hamburger.fas {
       display: block; /*make burger visible*/
    }
    .navbar .menu {
