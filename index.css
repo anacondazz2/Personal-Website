@@ -138,7 +138,7 @@ body::-webkit-scrollbar-thumb {
 /* HOME */
 .home {
    height: 100vh;
-   background: url(images/color_adventure.jpg) no-repeat fixed center;
+   background: url(images/synth_adventure.jpg) no-repeat fixed center;
    background-size: cover;
 }
 
@@ -277,6 +277,9 @@ body::-webkit-scrollbar-thumb {
    background-color: var(--dark-grey);
    border-bottom: 5px solid black;
 }
+.contact-container {
+   display: flex;
+}
 .contact-left {
    width: 50%;
    display: flex;
@@ -346,7 +349,7 @@ body::-webkit-scrollbar-thumb {
    margin-bottom: 10px;
    padding: 15px;
    background-color: black ;
-   color: blueviolet;
+   color: var(--orange);
 }
 .contact-right form textarea {
    resize: vertical;
@@ -363,7 +366,7 @@ body::-webkit-scrollbar-thumb {
    transition: all 0.3s ease;
 }
 .contact-right button:hover {
-   color: blueviolet;
+   color: var(--orange);
    font-weight: 600;
    background-color: black;
    cursor: pointer;
