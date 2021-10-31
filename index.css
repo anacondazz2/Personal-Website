@@ -126,7 +126,6 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar .menu li a:hover {
    color: violet;
-   font-size: 19.5px;
 }
 .hamburger.fas {
    font-size: 20px;
@@ -140,6 +139,11 @@ body::-webkit-scrollbar-thumb {
    height: 100vh;
    background: url(images/synth_adventure.jpg) no-repeat fixed center;
    background-size: cover;
+}
+.word-program {
+   color: blueviolet;
+   font-family: Consolas, "Inter";
+   font-weight: 600;
 }
 
 /* ABOUT */
