@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb {
 }
 .word-program {
    color: blueviolet;
-   font-family: Consolas, "Inter";
+   font-family: Consolas, monospace, "Inter";
    font-weight: 600;
 }
 
@@ -444,7 +444,7 @@ body::-webkit-scrollbar-thumb {
       width: 100%;
    }
    .contact-right form .input {
-      width: 60vw;
+      width: 65vw;
    }
 }
 @media (max-width: 900px) {
