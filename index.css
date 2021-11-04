@@ -137,7 +137,7 @@ body::-webkit-scrollbar-thumb {
 /* HOME */
 .home {
    height: 100vh;
-   width: 100%;
+   width: 100vw;
    background: url(./images/synth_adventure.jpg) no-repeat fixed center;
    background-size: cover;
 }
