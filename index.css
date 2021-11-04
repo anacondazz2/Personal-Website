@@ -462,6 +462,7 @@ body::-webkit-scrollbar-thumb {
    /* show mobile background images */
    .home {
       background-image: url(./images/mobile_images/mobile_synth_adventure.jpg);
+      background-size: contain;
    }
 }
 @media (max-width: 700px) {
