@@ -18,6 +18,9 @@
 html {
    scroll-behavior: smooth;
 }
+body {
+   background-color: black;
+}
 body::-webkit-scrollbar {
    width: 15px;
 }
@@ -447,6 +450,17 @@ body::-webkit-scrollbar-thumb {
    .contact-right form .input {
       width: 65vw;
    }
+
+   /* remove background images because can't solve mobile issue */
+   .home {
+      background: none;
+   }
+   .footer {
+      background: none;
+   }
+   .art-credit {
+      display: none;
+   }
 }
 @media (max-width: 900px) {
    .home .welcome-text {
@@ -502,17 +516,17 @@ body::-webkit-scrollbar-thumb {
 
 /* MOBILE IMAGE MEDIA QUERIES */
 /* Large mobile screens */
-@media (max-width:1366px) {
-   /* .home {
+/* @media (max-width:1366px) {
+   .home {
       background-image: url(./images/mobile_images/mobile_synth_adventure.jpg);
       background-position: top center;
       background-size: 100vw auto;
-   } */
-}
+   }
+} */
 /* Phone sceens */
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
    .home {
       background: url(./images/mobile_images/synth_adventure500.jpg) no-repeat fixed center center;
       background-size: 150vw auto;
    }
-}
+} */

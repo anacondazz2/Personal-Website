@@ -52,10 +52,6 @@ window.onscroll = navbarOnScroll;
 
 // home welcome text on hover
 window.onload = (event) => {
-   console.log("hi")
    welcomeText.style.opacity = 1;
-};
-// goodbye text on hover
-goodbyeText.onmouseover = () => {
    goodbyeText.style.opacity = 1;
-}
+};
