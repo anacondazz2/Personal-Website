@@ -136,10 +136,9 @@ body::-webkit-scrollbar-thumb {
 /* HOME */
 .home {
    height: 100vh;
-   /* width: 100%; */
+   width: 100%;
    background: url(./images/synth_adventure.jpg) no-repeat scroll center center;
-   background-size: cover;
-   overflow: hidden;
+   background-size: 100px auto;
 }
 .word-program {
    color: blueviolet;
