@@ -51,7 +51,8 @@ const navbarOnScroll = () => {
 window.onscroll = navbarOnScroll;
 
 // home welcome text on hover
-welcomeText.onmouseover = (event) => {
+window.onload = (event) => {
+   console.log("hi")
    welcomeText.style.opacity = 1;
 };
 // goodbye text on hover

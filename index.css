@@ -513,7 +513,6 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 500px) {
    .home {
       background: url(./images/mobile_images/synth_adventure500.jpg) no-repeat fixed center center;
-      background-size: cover;
-      /* background-size: 100vw auto; */
+      background-size: 150vw auto;
    }
 }
