@@ -124,7 +124,7 @@ body::-webkit-scrollbar-thumb {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: violet;
+   color: var(--orange);
 }
 .hamburger.fas {
    font-size: 20px;
@@ -138,7 +138,7 @@ body::-webkit-scrollbar-thumb {
    height: 100vh;
    width: 100%;
    background: url(./images/synth_adventure.jpg) no-repeat fixed center center;
-   background-size: cover;
+   background-size: 100% auto;
 }
 .word-program {
    color: blueviolet;
@@ -379,8 +379,9 @@ body::-webkit-scrollbar-thumb {
 /* FOOTER */
 .footer {
    height: 100vh;
+   width: 100%;
    background: url(./images/fantasy_wallpaper.jpg) no-repeat fixed center center;
-   background-size: cover;
+   background-size: 100% auto;
 }
 .footer .art-credit {
    position: absolute;
