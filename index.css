@@ -16,9 +16,11 @@
    font-family: "Inter", "Ubuntu", sans-serif;
 }
 html {
+   height: 100%;
    scroll-behavior: smooth;
 }
 body {
+   height: 100%;
    background-color: black;
 }
 body::-webkit-scrollbar {
@@ -142,11 +144,9 @@ body::-webkit-scrollbar-thumb {
 
 /* HOME */
 .home {
-   min-height: 100vh;
-   max-height: 100%;
-   max-height: 100vh;
-   max-width: 100%;
-   background: url(./images/synth_adventure.jpg) no-repeat fixed center center;
+   position: relative;
+   height: 100%;
+   background: url(./images/synth_adventure.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
@@ -356,6 +356,9 @@ body::-webkit-scrollbar-thumb {
    display: flex;
    align-items: center;
    font-size: 18px;
+   padding: 10px;
+   border-radius: 10px;
+   background-color: rgba(0, 0, 0, 0.4);
    color: white;
    margin-bottom: 15px;
 }
@@ -368,8 +371,10 @@ body::-webkit-scrollbar-thumb {
    text-decoration: underline;
 }
 .contact-bot .social-media a {
-   margin-right: 20px;
    color: white;
+}
+.contact-bot .social-media a:not(:last-child) {
+   margin-right: 20px;
 }
 .contact-bot .social-media i {
    font-size: 35px;
