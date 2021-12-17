@@ -29,11 +29,21 @@ body::-webkit-scrollbar-track {
    box-shadow: -3px 0 5px black;
 }
 body::-webkit-scrollbar-thumb {
-   background-color: blueviolet;
+   background-color: grey;
 }
 :target {
    scroll-margin-top: 70px;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: black;
+   opacity: 1; /* Firefox */
+ }
+ :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+ }
+ ::-ms-input-placeholder { /* Microsoft Edge */
+   color: black;
+ }
 ::selection {
    background-color: black;
 }
@@ -67,19 +77,13 @@ body::-webkit-scrollbar-thumb {
    font-weight: 500;
    text-align: center;
    color: white;
-}
-.header-bar {
-   margin-top: 13px;
-   margin-bottom: 65px;
-   width: 70px;
-   height: 5px;
-   background-color: var(--blue);
+   margin-bottom: 60px;
 }
 .dark-overlay {
    position: absolute;
    height: 100vh;
    width: 100%;
-   background-color: rgb(0, 0, 0, 0.2);
+   background-color: rgb(0, 0, 0, 0.5);
 }
 
 /* TOGGLES */
@@ -138,13 +142,15 @@ body::-webkit-scrollbar-thumb {
 
 /* HOME */
 .home {
-   height: 100vh;
-   width: 100%;
+   min-height: 100vh;
+   max-height: 100%;
+   max-height: 100vh;
+   max-width: 100%;
    background: url(./images/synth_adventure.jpg) no-repeat fixed center center;
    background-size: cover;
 }
 .word-program {
-   color: var(--blue);
+   color: var(--orange);
    font-family: Consolas, monospace, "Inter";
    font-weight: 600;
 }
@@ -279,22 +285,73 @@ body::-webkit-scrollbar-thumb {
 
 /* CONTACT */
 .contact {
+   min-height: 100vh;
+   max-height: 100%;
+   max-height: 100vh;
+   max-width: 100%;
+   background: url(./images/fantasy_wallpaper.jpg) no-repeat fixed center center;
+   background-size: cover;
+}
+.contact-wrapper {
    padding-top: 70px;
-   padding-bottom: 70px;
-   background-color: var(--dark-grey);
-   border-bottom: 5px solid black;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 .contact-container {
    display: flex;
+   flex-direction: column;
 }
-.contact-left {
-   width: 50%;
+.contact-top {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 40px;
+}
+.contact-top form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.contact-top form .input {
+   width: 600px;
+   font-size: 17px;
+   border-radius: 20px;
+   border-style: none;
+   margin-bottom: 10px;
+   padding: 15px;
+   background-color: rgba(255, 255, 255, 0.2) ;
+   color: black;
+}
+.contact-top form textarea {
+   resize: vertical;
+   max-height: 200px;
+}
+.contact-top button {
+   font-size: 15px;
+   width: max-content;
+   padding: 13px;
+   border-style: none;
+   border-radius: 30px;
+   border: 2px solid white;
+   background-color: rgba(0, 0, 0, 0.4);
+   color: lightgrey;
+   transition: all 0.3s ease;
+}
+.contact-top button:hover {
+   color: var(--orange);
+   font-weight: 600;
+   background-color: white;
+   cursor: pointer;
+}
+.contact-bot {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
-.contact-left div {
+.contact-bot div {
    /*each contact item*/
    display: flex;
    align-items: center;
@@ -302,91 +359,32 @@ body::-webkit-scrollbar-thumb {
    color: white;
    margin-bottom: 15px;
 }
-.contact-left .email a,
-.contact-left .phone-number p {
+.contact-bot .email a,
+.contact-bot .phone-number p {
    color: white;
    margin-left: 10px;
 }
-.contact-left .email a:hover {
+.contact-bot .email a:hover {
    text-decoration: underline;
 }
-.contact-left .social-media a {
+.contact-bot .social-media a {
    margin-right: 20px;
    color: white;
 }
-.contact-left .social-media i {
+.contact-bot .social-media i {
    font-size: 35px;
    transition: all 0.3s ease;
 }
-.contact-left .social-media .fa-discord:hover {
+.contact-bot .social-media .fa-discord:hover {
    color: #7289da;
 }
-.contact-left .social-media .fa-github:hover {
+.contact-bot .social-media .fa-github:hover {
    color: black;
 }
-.contact-left .social-media .fa-linkedin-in:hover {
+.contact-bot .social-media .fa-linkedin-in:hover {
    color: #2867b2;
 }
-.contact-left .social-media .fa-instagram:hover {
-   color: #dd2a7b;
-}
-
-.contact-right {
-   width: 50%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.contact-right .description {
-   font-size: 20px;
-   text-align: center;
-   color: white;
-   margin-bottom: 30px;
-}
-.contact-right form {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.contact-right form .input {
-   width: 35vw;
-   font-size: 17px;
-   border-radius: 20px;
-   border-style: none;
-   margin-bottom: 10px;
-   padding: 15px;
-   background-color: black ;
-   color: var(--orange);
-}
-.contact-right form textarea {
-   resize: vertical;
-}
-.contact-right button {
-   font-size: 15px;
-   width: max-content;
-   padding: 13px;
-   border-style: none;
-   border-radius: 30px;
-   border: 4px solid black;
-   background-color: transparent;
-   color: lightgrey;
-   transition: all 0.3s ease;
-}
-.contact-right button:hover {
-   color: var(--orange);
-   font-weight: 600;
-   background-color: black;
-   cursor: pointer;
-}
-
-/* FOOTER */
-.footer {
-   height: 100vh;
-   width: 100%;
-   background: url(./images/fantasy_wallpaper.jpg) no-repeat fixed center center;
-   background-size: cover;
-}
-.footer .art-credit {
+.contact .art-credit {
    position: absolute;
    bottom: 20px;
    right: 20px;
@@ -394,11 +392,11 @@ body::-webkit-scrollbar-thumb {
    font-weight: 500;
    color: white;
 }
-.footer .art-credit a {
+.contact .art-credit a {
    color: white;
    transition: all 0.5s ease;
 }
-.footer .art-credit a:hover {
+.contact .art-credit a:hover {
    color: rgb(216, 97, 255);
    text-decoration: underline;
 }
@@ -440,18 +438,18 @@ body::-webkit-scrollbar-thumb {
    .contact-container {
       flex-direction: column;
    }
-   .contact-left {
+   .contact-bot {
       width: 100%;
       margin-bottom: 50px;
    }
-   .contact-right {
+   .contact-top {
       width: 100%;
    }
-   .contact-right form .input {
+   .contact-top form .input {
       width: 65vw;
    }
 
-   /* remove background images because can't solve mobile issue */
+   /* remove background images because can't solve mobile issue
    .home {
       background: none;
    }
@@ -460,7 +458,7 @@ body::-webkit-scrollbar-thumb {
    }
    .art-credit {
       display: none;
-   }
+   } */
 }
 @media (max-width: 900px) {
    .home .welcome-text {

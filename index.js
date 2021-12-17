@@ -1,7 +1,6 @@
 // grab needed elements
 const html = document.querySelector("html");
 const welcomeText = document.querySelector(".home .large-panel-text");
-const goodbyeText = document.querySelector(".footer .large-panel-text");
 const navbar = document.querySelector(".navbar");
 const navbarMenu = document.querySelector(".navbar .menu");
 const hamburger = document.querySelector(".navbar .hamburger.fas");
@@ -53,5 +52,4 @@ window.onscroll = navbarOnScroll;
 // home welcome text on hover
 window.onload = (event) => {
    welcomeText.style.opacity = 1;
-   goodbyeText.style.opacity = 1;
 };

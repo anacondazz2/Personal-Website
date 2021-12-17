@@ -45,7 +45,6 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
    <section class="about resize-padding" id="about">
       <div class="about-header flex-col-center">
          <p class="header">About Me</p>
-         <div class="header-bar"></div>
       </div>
       <div class="about-container">
          <div class="about-left">
@@ -115,7 +114,6 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
    <section class="portfolio resize-padding" id="portfolio">
       <div class="portfiolo-header flex-col-center">
          <p class="header">My Projects</p>
-         <div class="header-bar"></div>
       </div>
       <div class="projects-wrapper flex-center">
          <div class="projects-container">
@@ -145,14 +143,22 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
    </section>
 
    <!-- CONTACT -->
-   <section class="contact resize-padding" id="contact">
-      <div class="contact-header flex-col-center">
-         <p class="header">Contact</p>
-         <div class="header-bar"></div>   
-      </div>
-      
-      <div class="contact-container">
-         <div class="contact-left">
+   <section class="contact" id="contact">
+      <div class="dark-overlay resize-padding contact-wrapper">
+         <div class="contact-header flex-col-center">
+            <p class="header">Contact</p>
+         </div>
+         
+         <div class="contact-top">
+            <!-- need hosting in order for form submission to work -->
+            <form action="https://formsubmit.co/0011b26a43f7fb19fa02cd829ff18571" method="POST" target="_blank">
+               <input placeholder="Name" type="text" name="name" required class="input">
+               <input placeholder="Email" type="email" name="name" required class="input">
+               <textarea placeholder="Your Message" type="text" name="message" required class="input"></textarea><br>
+               <button type="submit">Send Message</button>
+            </form>
+         </div>
+         <div class="contact-bot">
             <div class="email">
                <i class="far fa-envelope"></i>
                <a href="mailto:patrickhu360@outlook.com?" target="_blank">patrickhu360@outlook.com</a>
@@ -171,37 +177,13 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
                <a href="https://www.linkedin.com/in/patrick-hu-800a6a1b8/00000000" target="_blank">
                   <i class="fab fa-linkedin-in"></i>               
                </a>
-               <a href="https://www.instagram.com/patrick_hu7/" target="_blank">
-                  <i class="fab fa-instagram"></i>               
-               </a>
             </div>
          </div>
-         <div class="contact-right">
-            <p class="description">
-               Or just send an email here:
-            </p>
-            <!-- need hosting in order for form submission to work -->
-            <form action="https://formsubmit.co/0011b26a43f7fb19fa02cd829ff18571" method="POST" target="_blank">
-               <input placeholder="Name" type="text" name="name" required class="input">
-               <input placeholder="Email" type="email" name="name" required class="input">
-               <textarea placeholder="Your Message" type="text" name="message" required class="input"></textarea><br>
-               <button type="submit">Send Message</button>
-            </form>
-         </div>
-      </div>
-   </section>
-
-   <!-- FOOTER -->
-   <footer class="footer">
-      <div class="dark-overlay flex-center resize-padding">
-         <p class="large-panel-text">
-            See you next time.
-         </p>
          <p class="art-credit">
             Artwork by <a href="https://kvacm.artstation.com/" target="_blank">KVACM</a>!
          </p>
       </div>
-   </footer>
+   </section>
 </body>
 
 <script src="./index.js"></script>
