@@ -1,6 +1,5 @@
 /* import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
    --dark-grey: rgb(51, 51, 51);
@@ -14,7 +13,7 @@
    padding: 0;
    box-sizing: border-box;
    text-decoration: none;
-   font-family: "Roboto Mono", "Ubuntu", monospace, sans-serif;
+   font-family: "Inter", "Ubuntu", sans-serif;
 }
 html {
    height: 100%;
@@ -91,7 +90,7 @@ body::-webkit-scrollbar-thumb {
 
 /* TOGGLES */
 .navbar.darken {
-   padding: 25px 30px;
+   padding: 25px 55px;
    background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -106,26 +105,7 @@ body::-webkit-scrollbar-thumb {
    z-index: 999;
    transition: padding 0.3s ease, background-color 0.3s ease;
 }
-.navbar .menu li {
-   margin-right: 30px;
-   display: inline-block;
-   list-style: none;
-}
-.navbar .menu li a {
-   font-size: 20px;
-   transition: all 0.3s ease;
-   color: white;
-}
-.navbar .menu li a:hover {
-   color: limegreen;
-}
-.hamburger.fas {
-   font-size: 20px;
-   cursor: pointer;  
-   color: white;
-   display: none;
-}
-/* .navbar .resume {
+.navbar .resume {
    width: max-content;
    padding: 12px;
    border-radius: 25px;
@@ -141,17 +121,37 @@ body::-webkit-scrollbar-thumb {
    background-color: var(--orange);
    color: black;
    font-weight: 500;
-} */
+}
+.navbar .menu li {
+   margin-right: 30px;
+   display: inline-block;
+   list-style: none;
+}
+.navbar .menu li a {
+   font-size: 20px;
+   transition: all 0.3s ease;
+   color: white;
+}
+.navbar .menu li a:hover {
+   color: var(--orange);
+}
+.hamburger.fas {
+   font-size: 20px;
+   cursor: pointer;
+   color: white;
+   display: none;
+}
 
 /* HOME */
 .home {
    position: relative;
    height: 100%;
-   background: url(./images/synth_adventure.jpg) no-repeat fixed center;
+   background: url(https://www.w3schools.com/howto/img_parallax.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
    color: var(--orange);
+   font-family: Consolas, monospace, "Inter";
    font-weight: 600;
 }
 
@@ -325,7 +325,7 @@ body::-webkit-scrollbar-thumb {
    color: black;
 }
 .contact-top form textarea {
-   resize: none;
+   resize: vertical;
    max-height: 200px;
 }
 .contact-top button {
@@ -391,10 +391,8 @@ body::-webkit-scrollbar-thumb {
 }
 .contact .art-credit {
    position: absolute;
-   writing-mode: vertical-lr;
-   text-orientation: mixed;
-   bottom: 10px;
-   right: 10px;
+   bottom: 20px;
+   right: 20px;
    font-size: 18px;
    font-weight: 500;
    color: white;
@@ -455,6 +453,17 @@ body::-webkit-scrollbar-thumb {
    .contact-top form .input {
       width: 65vw;
    }
+
+   /* remove background images because can't solve mobile issue
+   .home {
+      background: none;
+   }
+   .footer {
+      background: none;
+   }
+   .art-credit {
+      display: none;
+   } */
 }
 @media (max-width: 900px) {
    .home .welcome-text {
