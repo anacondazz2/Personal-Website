@@ -39,7 +39,7 @@ for (let i = 0; i < nav_links.length; i++) {
 
 // on scroll
 const navbarOnScroll = () => {
-   if (window.scrollY > 40 || burger_active) {
+   if (window.scrollY > 40 && !atEndOfPage() || burger_active) {
       navbar.classList.add("darken");
    } else {
       navbar.classList.remove("darken");
