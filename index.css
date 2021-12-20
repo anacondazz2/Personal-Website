@@ -48,6 +48,7 @@ body::-webkit-scrollbar-thumb {
    color: black;
  }
 ::selection {
+   color: limegreen;
    background-color: black;
 }
 
