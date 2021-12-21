@@ -7,6 +7,7 @@
    --blue: rgb(82, 200, 246);
    --yellow: rgb(255, 242, 0);
    --orange: #ff6a00;
+   --pink: rgb(255, 143, 161);
 }
 
 * {
@@ -308,7 +309,7 @@ body::-webkit-scrollbar-thumb {
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin-bottom: 40px;
+   margin-bottom: 30px;
 }
 .contact-top form {
    display: flex;
@@ -322,7 +323,7 @@ body::-webkit-scrollbar-thumb {
    border-style: none;
    margin-bottom: 10px;
    padding: 15px;
-   background-color: rgba(255, 255, 255, 0.2) ;
+   background-color: rgba(255, 255, 255, 0.3) ;
    color: black;
 }
 .contact-top form textarea {
@@ -334,17 +335,17 @@ body::-webkit-scrollbar-thumb {
    width: max-content;
    padding: 13px;
    border-style: none;
-   border-radius: 30px;
-   border: 2px solid white;
+   border-radius: 20px;
+   border: 3px solid white;
    background-color: rgba(0, 0, 0, 0.4);
-   color: lightgrey;
+   color: white;
    transition: all 0.3s ease;
 }
 .contact-top button:hover {
-   color: var(--orange);
-   font-weight: 600;
-   background-color: white;
+   color: var(--yellow);
+   background-color: rgba(0, 0, 0, 0.75);
    cursor: pointer;
+   border: 3px solid var(--yellow);
 }
 .contact-bot {
    display: flex;
@@ -385,7 +386,7 @@ body::-webkit-scrollbar-thumb {
    color: #7289da;
 }
 .contact-bot .social-media .fa-github:hover {
-   color: rgb(255, 143, 161);
+   color: var(--pink);
 }
 .contact-bot .social-media .fa-linkedin-in:hover {
    color: #2867b2;
@@ -411,9 +412,8 @@ body::-webkit-scrollbar-thumb {
 
 /* MEDIA QUERIES */
 @media (max-width: 1200px) { /* desktops */
-   /* make projects bigger */
-   .projects-container {
-      grid-template-columns: 29vw 29vw 29vw;
+   .navbar {
+      padding: 15px 20px;
    }
    /* wrap about-right */
    .about-container {
@@ -434,26 +434,25 @@ body::-webkit-scrollbar-thumb {
       width: 75vw;
       height: 35px;
    }
-
+   /* make projects bigger */
+   .projects-container {
+      grid-template-columns: 29vw 29vw 29vw;
+   }
    /* wrap projects */
    .projects-container {
       grid-template-columns: 40vw 40vw;
    }
-
-   .contact-top form .input {
-      width: 65vw;
-   }
 }
 @media (max-width: 768px) { /* tablets and laptops */
-   .home .welcome-text {
+   .home .large-panel-text {
       font-size: 40px;
-   }
-   .navbar {
-      padding: 30px 30px;
    }
    /* further wrap projects */
    .projects-container {
       grid-template-columns: 80vw;
+   }
+   .contact-top form .input {
+      width: 75vw;
    }
 }
 @media (max-width: 550px) { /* navbar items turn into hamburger */
@@ -479,7 +478,7 @@ body::-webkit-scrollbar-thumb {
    }
 }
 @media (max-width: 480px) { /* phones */
-   .home .welcome-text {
+   .home .large-panel-text {
       font-size: 35px;
    }
    /* dropdown class can only be defined here so that it's gone when screen size changes */
@@ -490,6 +489,9 @@ body::-webkit-scrollbar-thumb {
    .about-left .pfp {
       width: 180px;
       border: 4px solid var(--blue);
+   }
+   .contact-wrapper {
+      padding-top: 45px;
    }
    .contact-bot div {
       /*each contact item*/
@@ -502,6 +504,9 @@ body::-webkit-scrollbar-thumb {
    }
    .contact-bot .social-media i {
       font-size: 25px;
+   }
+   .contact .art-credit {
+      font-size: 10px;
    }
 }
 
