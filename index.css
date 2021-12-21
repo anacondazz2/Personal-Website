@@ -8,6 +8,7 @@
    --yellow: rgb(255, 242, 0);
    --orange: #ff6a00;
    --pink: rgb(255, 143, 161);
+   --kvacpurp: rgb(216, 97, 255);
 }
 
 * {
@@ -336,16 +337,16 @@ body::-webkit-scrollbar-thumb {
    padding: 13px;
    border-style: none;
    border-radius: 20px;
-   border: 3px solid white;
+   border: 2px solid white;
    background-color: rgba(0, 0, 0, 0.4);
    color: white;
-   transition: all 0.3s ease;
+   transition: all 0.5s ease;
 }
 .contact-top button:hover {
-   color: var(--yellow);
+   color: limegreen;
    background-color: rgba(0, 0, 0, 0.75);
    cursor: pointer;
-   border: 3px solid var(--yellow);
+   border: 2px solid rgba(0, 0, 0, 0.75);
 }
 .contact-bot {
    display: flex;
@@ -406,7 +407,7 @@ body::-webkit-scrollbar-thumb {
    transition: all 0.5s ease;
 }
 .contact .art-credit a:hover {
-   color: rgb(216, 97, 255);
+   color: var(--kvacpurp);
    text-decoration: underline;
 }
 
