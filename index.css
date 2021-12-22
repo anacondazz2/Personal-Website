@@ -211,8 +211,8 @@ body::-webkit-scrollbar-thumb {
 }
 .projects-container img {
    max-width: 100%;
-   border-radius: 20px;
-   padding: 3px; /* fake border */
+   border-radius: 25px;
+   padding: 2px; /* fake border */
    background-color: rgba(0, 0, 0, 0.4);
    object-fit: cover;
    transition: all 0.5s ease;
