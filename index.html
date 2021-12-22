@@ -6,6 +6,8 @@
 cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
 -->
 
+<!-- put socials on the side -->
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,115 +24,66 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
       <ul class="menu">
          <li><a href="#home">Home</a></li>
          <li><a href="#about">About</a></li>
-         <li><a href="#portfolio">Portfolio</a></li>
+         <li><a href="#portfolio">My Projects</a></li>
          <li><a href="#contact">Contact</a></li>
       </ul>
    </nav>
    
    <!-- HOME -->
-   <section class="home" id="home">
-      <div class="dark-overlay flex-col-center resize-padding">
-         <p class="large-panel-text">
+   <section class="home flex-center" id="home">
+      <div class="resize-padding">
+         <p class="welcome-text">
             Hey there, I'm <span style="color: white">Patrick</span>.<br>This is my <span class="word-program">&lt;website/&gt;</span>!
          </p>
-      </div>
+      </div>   
    </section>
 
    <!-- ABOUT -->
    <section class="about resize-padding" id="about">
-      <div class="about-header flex-col-center">
+      <div class="flex-col-center">
          <p class="header">About Me</p>
       </div>
       <div class="about-container">
-         <div class="about-left">
-            <img class="pfp" src="images/phil-the-axolotl.jpg" alt="Picture of me">
-            <p class="my-description">
-               I'm a high school student in Markham, Ontario.<br>I like to code and learn about computers in depth, software and hardware.<br>Currently, I'm doing front-end work and competitive programming.
-            </p>
-         </div>
-         <div class="about-right">
-            <p class="skills-description">
-               How familiar I am with each of these skills:<br>100% means I'm the most familiar with it.
-            </p>
-
-            <div class="skills-wrapper">
-               <div class="skill-container">
-                  <div class="bar">
-                     <div class="bar-fill" style="width: 100%"><span class="skill flex-center">C++</span></div>
-                  </div>
-                  <span class="percentage">100%</span>
-               </div>
-   
-               <div class="skill-container">
-                  <div class="bar flex-row-align">
-                     <div class="bar-fill" style="width: 90%"><span class="skill flex-center">CSS</span></div>
-                     <span class="bar-rest" style="width: 10%;"></span>
-                  </div>
-                  <span class="percentage">90%</span>
-               </div>
-   
-               <div class="skill-container">
-                  <div class="bar">
-                     <div class="bar-fill" style="width: 80%"><span class="skill flex-center">HTML</span></div>
-                     <span class="bar-rest" style="width: 20%;"></span>
-                  </div>
-                  <span class="percentage">80%</span>
-               </div>
-               
-               <div class="skill-container">
-                  <div class="bar">
-                     <div class="bar-fill" style="width: 75%"><span class="skill flex-center">JS</span></div>
-                     <span class="bar-rest" style="width: 25%;"></span>
-                  </div>
-                  <span class="percentage">75%</span>
-               </div>
-   
-               <div class="skill-container">
-                  <div class="bar">
-                     <div class="bar-fill" style="width: 40%"><span class="skill flex-center">React</span></div>
-                     <span class="bar-rest" style="width: 60%;"></span>
-                  </div>
-                  <span class="percentage">40%</span>
-               </div>
-   
-               <div class="skill-container">
-                  <div class="bar">
-                     <div class="bar-fill" style="width: 30%"><span class="skill flex-center">Python</span></div>
-                     <span class="bar-rest" style="width: 70%;"></span>
-                  </div>
-                  <span class="percentage">30%</span>
-               </div>
-            </div>
+         <div class="about-1">
+            <ul>
+               <li>High schooler in Canada</li>
+               <li>I like to code and learn about computers, hardware and software</li>
+               <li>Started programming with freecodecamp, nothing too fun.</li>
+               <li>Learned C++ with <a href="https://www.learncpp.com/" target="_blank">learncpp</a>. Awesome site and experience.</li>
+               <li>Started DMOJing, joined Olympiads.</li>
+               <li>Games: Apex (not very good), Hollow Knight, Hades</li>
+               <li>Other stuff: Fitness, basketball, walking</li>
+            </ul>
+            <img src="./images/thumbs-up.jpg" alt="Pathfinder thumps up" class="thumbs-up">
+            <img src="./images/grub.png" alt="Hollow Knight Grub" class="grub">
          </div>
       </div>
    </section>
 
    <!-- PORTFOLIO -->
    <section class="portfolio resize-padding" id="portfolio">
-      <div class="portfiolo-header flex-col-center">
+      <div class="flex-col-center">
          <p class="header">My Projects</p>
       </div>
       <div class="projects-wrapper flex-center">
          <div class="projects-container">
             <a href="https://anacondazz2.github.io/To-do-list/" target="_blank">
-               <img src="images/proj_screenshots/1x/Asset 6.png" alt="To do list project">
+               <img src="images/proj screenshots/1x/Asset 6.png" alt="To do list project">
                <figcaption>
-                  <h2>To Do List</h3><br>
-                  <h4>A simple To Do List to prevent you from not completing the day's tasks!</h4>
+                  <h3>To Do List</h3><br>
                </figcaption>
             </a>
             <a href="https://anacondazz2.github.io/JS-Calculator/" target="_blank">
-               <img src="images/proj_screenshots/1x/Asset 7.png" alt="JavaScript Calculator project">
+               <img src="images/proj screenshots/1x/Asset 7.png" alt="JavaScript Calculator project">
                <figcaption>
-                  <h2>JavaScript Calculator</h3><br>
-                  <h4>A simple JS calculator with a nice look.</h4>
+                  <h3>JavaScript Calculator</h3><br>
                </figcaption>
             </a>
             <a href="https://anacondazz2.github.io/React-Tic-tac-toe" target="_blank">
-               <img src="images/proj_screenshots/1x/Asset 8.png" alt="React Tic-tac-toe project">
+               <img src="images/proj screenshots/1x/Asset 8.png" alt="React Tic-Tac-Toe project">
                <figcaption>
-                  <h2>Tic Tac Toe</h3><br>
-                  <h4>Not your average tic tac toe; travel through the game's history to analyze what you did wrong!</h4>
+                  <h3>Tic Tac Toe</h3><br>
+                  <h4>Made using React's tutorial. Supports time travel through each move.</h4>
                </figcaption>
             </a>
          </div>
@@ -139,13 +92,13 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
 
    <!-- CONTACT -->
    <section class="contact" id="contact">
-      <div class="dark-overlay resize-padding flex-center" style="overflow: hidden;">
-         <div class="contact-wrapper" style="overflow: hidden;">
-            <div class="contact-header flex-col-center">
+      <div class="resize-padding flex-center">
+         <div class="contact-wrapper">
+            <div class="flex-col-center">
                <p class="header">Contact</p>
             </div>
             
-            <div class="contact-top">
+            <div class="contact-1">
                <!-- need hosting in order for form submission to work -->
                <form action="https://formsubmit.co/0011b26a43f7fb19fa02cd829ff18571" method="POST" target="_blank">
                   <input placeholder="Name" type="text" name="name" required class="input">
@@ -154,7 +107,7 @@ cd '/c/Users/Patri/OneDrive/Desktop/Git Repos/Personal Website Repos'
                   <button type="submit">Send</button>
                </form>
             </div>
-            <div class="contact-bot">
+            <div class="contact-2">
                <div class="email">
                   <i class="far fa-envelope"></i>
                   <a href="mailto:patrickhu360@outlook.com?" target="_blank">patrickhu360@outlook.com</a>

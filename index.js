@@ -1,10 +1,10 @@
 // grab needed elements
 const html = document.querySelector("html");
-const welcomeText = document.querySelector(".home .large-panel-text");
+const welcomeText = document.querySelector(".home .welcome-text");
 const navbar = document.querySelector(".navbar");
+const nav_links = document.querySelectorAll(".navbar .menu li a");
 const navbarMenu = document.querySelector(".navbar .menu");
 const hamburger = document.querySelector(".navbar .hamburger.fas");
-const nav_links = document.querySelectorAll(".navbar .menu li a");
 
 // functions
 const atEndOfPage = () => {
@@ -15,6 +15,11 @@ const updateBurgerIcon = () => {
    ? "hamburger fas fa-times" // 'x' close button
    : "hamburger fas fa-bars"; // triple bar menu button
 }
+
+// on load
+window.onload = (event) => {
+   welcomeText.style.opacity = 1;
+};
 
 // hamburger on-click
 let burger_active = false;
@@ -46,8 +51,3 @@ const navbarOnScroll = () => {
    }
 };
 window.onscroll = navbarOnScroll;
-
-// home welcome text on hover
-window.onload = (event) => {
-   welcomeText.style.opacity = 1;
-};

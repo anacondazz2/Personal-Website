@@ -1,6 +1,6 @@
 /* import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
    --dark-grey: rgb(51, 51, 51);
@@ -39,16 +39,19 @@ body::-webkit-scrollbar-thumb {
 :target {
    scroll-margin-top: 70px;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+   /* Chrome, Firefox, Opera, Safari 10.1+ */
    color: black;
    opacity: 1; /* Firefox */
- }
- :-ms-input-placeholder { /* Internet Explorer 10-11 */
+}
+:-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
    color: black;
- }
- ::-ms-input-placeholder { /* Microsoft Edge */
+}
+::-ms-input-placeholder {
+   /* Microsoft Edge */
    color: black;
- }
+}
 ::selection {
    color: limegreen;
    background-color: black;
@@ -69,7 +72,7 @@ body::-webkit-scrollbar-thumb {
    align-items: center;
    justify-content: center;
 }
-.large-panel-text {
+.welcome-text {
    font-size: 50px;
    font-weight: 450;
    text-align: center;
@@ -85,23 +88,17 @@ body::-webkit-scrollbar-thumb {
    color: white;
    margin-bottom: 60px;
 }
-.dark-overlay {
-   position: absolute;
-   height: 100vh;
-   width: 100%;
-   background-color: rgb(0, 0, 0, 0.5);
-}
 
 /* TOGGLES */
 .navbar.darken {
-   padding: 25px 30px;
+   padding: 20px 20px;
    background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* NAVBAR */
 .navbar {
    width: 100vw;
-   padding: 40px 55px;
+   padding: 30px 30px;
    position: fixed;
    display: flex;
    justify-content: space-between;
@@ -124,7 +121,7 @@ body::-webkit-scrollbar-thumb {
 }
 .hamburger.fas {
    font-size: 20px;
-   cursor: pointer;  
+   cursor: pointer;
    color: white;
    display: none;
 }
@@ -148,9 +145,9 @@ body::-webkit-scrollbar-thumb {
 
 /* HOME */
 .home {
-   position: relative;
    height: 100%;
-   background: url(./images/synth_adventure.jpg) no-repeat fixed center;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+      url(./images/synth_adventure.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
@@ -160,104 +157,64 @@ body::-webkit-scrollbar-thumb {
 
 /* ABOUT */
 .about {
-   padding-top: 70px;
-   padding-bottom: 70px;
+   padding-top: 60px;
+   padding-bottom: 60px;
    background-color: var(--dark-grey);
    border-top: 5px solid black;
-   border-bottom: 5px solid black;
+   position: relative;
 }
 .about-container {
    display: flex;
+   justify-content: center;
 }
-.about-left {
+.about-1 {
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 50%;
+   color: white;
+   font-size: 18px;
 }
-.about-left .pfp {
-   width: 250px;
+.about-1 li a {
+   color: var(--blue);
+}
+.about-1 .thumbs-up {
+   margin-top: 40px;
+   width: 200px;
    max-width: 100%;
-   height: auto;
-   border-radius: 50%;
-   border: 5px solid var(--blue);
-   transition: all 0.3s ease;
+   border: 3px solid black;
 }
-.about-left .my-description {
-   margin-top: 30px;
-   max-width: 500px;
-   font-size: 18px;
-   color: white;
-   text-align: center;
-}
-.about-right {
-   width: 45%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.about-right .skills-description {
-   font-size: 18px;
-   text-align: center;
-   color: white;
-   margin-bottom: 15px;
-}
-.skill-container {
-   display: flex;
-   margin-bottom: 15px;
-   width: max-content;
-}
-.about-right .bar {
-   display: inline-flex;
-   width: 37vw;
-   height: 35px;
-}
-.about-right .bar-fill {
-   display: inline-block;
-   height: inherit;
-   background: #ff9549;
-}
-.bar-fill .skill {
-   display: inline-flex;
-   width: 80px;
-   height: inherit;
-   font-weight: 700;
-   color: black;
-   background-color: var(--orange);
-}
-.bar .bar-rest {
-   display: inline-block;
-   height: inherit;
-   background-color: black;
-}
-.percentage {
-   display: flex;
-   align-items: center; /*vert. align text*/
-   margin-left: 8px;
-   color: white;
+.about-1 .grub {
+   position: absolute;
+   width: 100px;
+   right: 20vw;
+   bottom: -55px;
 }
 
 /* PORTFOLIO */
 .portfolio {
-   padding-top: 70px;
-   padding-bottom: 70px;
+   padding-top: 60px;
+   padding-bottom: 60px;
    background-color: rgb(82, 82, 82);
+   border-top: 5px solid black;
    border-bottom: 5px solid black;
+   position: relative;
+   z-index: 1;
 }
 .projects-container {
    display: grid;
-   grid-template-columns: 25vw 25vw 25vw;
-   grid-gap: 25px;
+   grid-template-columns: 22vw 22vw 22vw;
+   grid-gap: 35px;
 }
 .projects-container a {
    position: relative; /*needed for figcaption absolute positioning*/
+   height: max-content;
 }
 .projects-container img {
    max-width: 100%;
-   height: auto;
+   border-radius: 20px;
+   padding: 3px; /* fake border */
+   background-color: rgba(0, 0, 0, 0.4);
    object-fit: cover;
-   border-radius: 30px;
-   border: 1px solid black;
    transition: all 0.5s ease;
 }
 .projects-container a:hover img {
@@ -277,7 +234,7 @@ body::-webkit-scrollbar-thumb {
    opacity: 0;
    transition: all 0.5s ease;
 }
-.projects-container figcaption h2 {
+.projects-container figcaption h3 {
    display: inline-block;
    padding: 10px;
    margin-bottom: 8px;
@@ -288,15 +245,17 @@ body::-webkit-scrollbar-thumb {
 
 /* CONTACT */
 .contact {
+   position: relative; /* for art credit abs positioning */
    min-height: 100vh;
    max-height: 100%;
    max-height: 100vh;
    max-width: 100%;
-   background: url(./images/grassy-shore.jpg) no-repeat fixed center center;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+      url(./images/desert-coasts.jpg) fixed center center;
    background-size: cover;
 }
 .contact-wrapper {
-   padding-top: 70px;
+   padding-top: 110px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -306,32 +265,32 @@ body::-webkit-scrollbar-thumb {
    display: flex;
    flex-direction: column;
 }
-.contact-top {
+.contact-1 {
    display: flex;
    flex-direction: column;
    align-items: center;
    margin-bottom: 30px;
 }
-.contact-top form {
+.contact-1 form {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-.contact-top form .input {
+.contact-1 form .input {
    width: 600px;
    font-size: 17px;
    border-radius: 20px;
    border-style: none;
    margin-bottom: 10px;
    padding: 15px;
-   background-color: rgba(255, 255, 255, 0.3) ;
+   background-color: rgba(255, 255, 255, 0.3);
    color: black;
 }
-.contact-top form textarea {
+.contact-1 form textarea {
    resize: none;
    max-height: 200px;
 }
-.contact-top button {
+.contact-1 button {
    font-size: 15px;
    width: max-content;
    padding: 13px;
@@ -342,54 +301,70 @@ body::-webkit-scrollbar-thumb {
    color: white;
    transition: all 0.5s ease;
 }
-.contact-top button:hover {
+.contact-1 button:hover {
    color: limegreen;
    background-color: rgba(0, 0, 0, 0.75);
    cursor: pointer;
    border: 2px solid rgba(0, 0, 0, 0.75);
 }
-.contact-bot {
+.contact-2 {
+   position: absolute;
+   left: 10px;
+   bottom: 20px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
+   align-items: flex-start;
 }
-.contact-bot div {
+.contact-2 div {
    /*each contact item*/
    display: flex;
    align-items: center;
-   font-size: 18px;
+   font-size: 22px;
    padding: 10px;
    border-radius: 10px;
    background-color: rgba(0, 0, 0, 0.4);
    color: white;
-   margin-bottom: 15px;
+   margin-bottom: 10px;
 }
-.contact-bot .email a,
-.contact-bot .phone-number p {
+.contact-2 .email a,
+.contact-2 .phone-number p {
+   margin-left: 0;
+   max-width: 0;
+   overflow: hidden;
    color: white;
-   margin-left: 10px;
+   font-size: 16px;
+   white-space: nowrap;
+   transition: all 0.4s ease-out;
 }
-.contact-bot .email a:hover {
+.contact-2 .email:hover a,
+.contact-2 .phone-number:hover p {
+   margin-left: 10px;
+   max-width: 1000px;
+}
+.contact-2 .email a:hover {
    text-decoration: underline;
 }
-.contact-bot .social-media a {
+.contact-2 .social-media {
+   display: flex;
+   flex-direction: column;
+}
+.contact-2 .social-media a {
    color: white;
 }
-.contact-bot .social-media a:not(:last-child) {
-   margin-right: 20px;
+.contact-2 .social-media a:not(:last-child) {
+   margin-bottom: 15px;
 }
-.contact-bot .social-media i {
-   font-size: 35px;
+.contact-2 .social-media i {
    transition: all 0.3s ease;
 }
-.contact-bot .social-media .fa-discord:hover {
+.contact-2 .social-media .fa-discord:hover {
    color: #7289da;
 }
-.contact-bot .social-media .fa-github:hover {
+.contact-2 .social-media .fa-github:hover {
    color: var(--pink);
 }
-.contact-bot .social-media .fa-linkedin-in:hover {
+.contact-2 .social-media .fa-linkedin-in:hover {
    color: #2867b2;
 }
 .contact .art-credit {
@@ -412,28 +387,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1200px) { /* desktops */
+@media (max-width: 1200px) {
+   /* desktops */
    .navbar {
       padding: 15px 20px;
    }
-   /* wrap about-right */
+   /* wrap about-1 */
    .about-container {
       flex-direction: column;
-   }
-   .about-left {
-      width: 100%;
-      margin-bottom: 50px;
-   }
-   .about-left .my-description {
-      max-width: 700px;
-   }
-   .about-right {
-      width: 100%;
-   }
-   .about-right .bar {
-      display: inline-flex;
-      width: 75vw;
-      height: 35px;
    }
    /* make projects bigger */
    .projects-container {
@@ -444,24 +405,39 @@ body::-webkit-scrollbar-thumb {
       grid-template-columns: 40vw 40vw;
    }
 }
-@media (max-width: 768px) { /* tablets and laptops */
-   .home .large-panel-text {
+@media (max-width: 768px) {
+   /* tablets and laptops */
+   .home .welcome-text {
       font-size: 40px;
+   }
+   .navbar {
+      padding: 15px 15px;
+   }
+   .navbar .menu li a {
+      font-size: 16px;
    }
    /* further wrap projects */
    .projects-container {
-      grid-template-columns: 80vw;
+      grid-template-columns: 50vw;
    }
-   .contact-top form .input {
-      width: 75vw;
+   .contact-1 form .input {
+      width: 70vw;
+      font-size: 11px;
+      border-radius: 15px;
+      margin-bottom: 8px;
+      padding: 8px;
+   }
+   .contact-1 form button {
+      font-size: 11px;
+      padding: 10px;
    }
 }
-@media (max-width: 550px) { /* navbar items turn into hamburger */
-   /* show hamburger, make navbar dropdown */
+@media (max-width: 550px) {
    .hamburger.fas {
       display: block; /*make burger visible*/
    }
    .navbar .menu {
+      /* hide nav items */
       position: absolute;
       top: 100%;
       left: 0;
@@ -477,24 +453,22 @@ body::-webkit-scrollbar-thumb {
       margin-top: 15px;
       margin-bottom: 15px;
    }
-}
-@media (max-width: 480px) { /* phones */
-   .home .large-panel-text {
-      font-size: 35px;
-   }
    /* dropdown class can only be defined here so that it's gone when screen size changes */
    .navbar .menu.dropdown {
       border-top: 5px solid rgba(255, 255, 255, 0.75);
       height: 180px;
    }
-   .about-left .pfp {
-      width: 180px;
-      border: 4px solid var(--blue);
+}
+@media (max-width: 480px), (max-height: 730px) {
+   /* phones */
+   .header {
+      font-size: 32px;
+      margin-bottom: 45px;
    }
-   .contact-wrapper {
-      padding-top: 45px;
+   .home .welcome-text {
+      font-size: 35px;
    }
-   .contact-bot div {
+   .contact-2 div {
       /*each contact item*/
       font-size: 12px;
       padding: 7px;
@@ -503,8 +477,8 @@ body::-webkit-scrollbar-thumb {
       color: white;
       margin-bottom: 11px;
    }
-   .contact-bot .social-media i {
-      font-size: 25px;
+   .contact-2 .social-media i {
+      font-size: 12px;
    }
    .contact .art-credit {
       font-size: 10px;
