@@ -174,8 +174,13 @@ body::-webkit-scrollbar-thumb {
    color: white;
    font-size: 18px;
 }
-.about-1 li a {
+.about-1 .learncpp {
+   color: white;
+   transition: all 0.4s ease;
+}
+.about-1 .learncpp:hover {
    color: var(--blue);
+   text-decoration: underline;
 }
 .about-1 .thumbs-up {
    margin-top: 40px;
