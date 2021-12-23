@@ -175,11 +175,11 @@ body::-webkit-scrollbar-thumb {
    font-size: 18px;
    margin-bottom: 130px;
 }
-.about-1 .learncpp {
+.about-1 li a {
    color: white;
    transition: all 0.4s ease;
 }
-.about-1 .learncpp:hover {
+.about-1 li a:hover {
    color: var(--blue);
    text-decoration: underline;
 }
@@ -190,7 +190,6 @@ body::-webkit-scrollbar-thumb {
    left: 22vw;
    bottom: -30px;
    transform: rotate(-15deg);
-   draggable: 
 }
 .about-1 .grub {
    position: absolute;
