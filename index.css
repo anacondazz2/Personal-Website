@@ -173,6 +173,7 @@ body::-webkit-scrollbar-thumb {
    align-items: center;
    color: white;
    font-size: 18px;
+   margin-bottom: 130px;
 }
 .about-1 .learncpp {
    color: white;
@@ -183,15 +184,18 @@ body::-webkit-scrollbar-thumb {
    text-decoration: underline;
 }
 .about-1 .thumbs-up {
-   margin-top: 40px;
+   position: absolute;
    width: 200px;
    max-width: 100%;
-   border: 3px solid black;
+   left: 22vw;
+   bottom: -30px;
+   transform: rotate(-15deg);
 }
 .about-1 .grub {
    position: absolute;
    width: 100px;
-   right: 20vw;
+   max-width: 100%;
+   right: 25vw;
    bottom: -55px;
 }
 
