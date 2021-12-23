@@ -8,13 +8,15 @@ const hamburger = document.querySelector(".navbar .hamburger.fas");
 
 // functions
 const atEndOfPage = () => {
-   return Math.abs(html.scrollHeight - html.scrollTop - html.clientHeight) <= 3.0;
-}
+   return (
+      Math.abs(html.scrollHeight - html.scrollTop - html.clientHeight) <= 3.0
+   );
+};
 const updateBurgerIcon = () => {
    document.querySelector(".navbar .hamburger.fas").className = burger_active
-   ? "hamburger fas fa-times" // 'x' close button
-   : "hamburger fas fa-bars"; // triple bar menu button
-}
+      ? "hamburger fas fa-times" // 'x' close button
+      : "hamburger fas fa-bars"; // triple bar menu button
+};
 
 // on load
 window.onload = (event) => {
@@ -39,12 +41,12 @@ for (let i = 0; i < nav_links.length; i++) {
          burger_active = false;
          updateBurgerIcon();
       }
-   })
+   });
 }
 
 // on scroll
 const navbarOnScroll = () => {
-   if (window.scrollY > 40 && !atEndOfPage() || burger_active) {
+   if ((window.scrollY > 40 && !atEndOfPage()) || burger_active) {
       navbar.classList.add("darken");
    } else {
       navbar.classList.remove("darken");

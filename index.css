@@ -173,6 +173,7 @@ body::-webkit-scrollbar-thumb {
    align-items: center;
    color: white;
    font-size: 18px;
+   max-width: 80vw;
    margin-bottom: 130px;
 }
 .about-1 li a {
@@ -396,14 +397,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1200px) {
+@media (max-width: 1201px) {
    /* desktops */
+   .home {
+      background-attachment: scroll; /* fixed bg image for iOS */
+   }
    .navbar {
       padding: 15px 20px;
-   }
-   /* wrap about-1 */
-   .about-container {
-      flex-direction: column;
    }
    /* make projects bigger */
    .projects-container {
@@ -414,7 +414,7 @@ body::-webkit-scrollbar-thumb {
       grid-template-columns: 40vw 40vw;
    }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
    /* tablets and laptops */
    .home .welcome-text {
       font-size: 40px;
@@ -468,7 +468,7 @@ body::-webkit-scrollbar-thumb {
       height: 180px;
    }
 }
-@media (max-width: 480px), (max-height: 730px) {
+@media (max-width: 481px), (max-height: 730px) {
    /* phones */
    .header {
       font-size: 32px;
@@ -493,20 +493,3 @@ body::-webkit-scrollbar-thumb {
       font-size: 10px;
    }
 }
-
-/* MOBILE IMAGE MEDIA QUERIES */
-/* Large mobile screens */
-/* @media (max-width:1366px) {
-   .home {
-      background-image: url(./images/mobile_images/mobile_synth_adventure.jpg);
-      background-position: top center;
-      background-size: 100vw auto;
-   }
-} */
-/* Phone sceens */
-/* @media (max-width: 500px) {
-   .home {
-      background: url(./images/mobile_images/synth_adventure500.jpg) no-repeat fixed center center;
-      background-size: 150vw auto;
-   }
-} */
