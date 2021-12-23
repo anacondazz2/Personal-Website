@@ -1,5 +1,6 @@
 // grab needed elements
 const html = document.querySelector("html");
+const home = document.querySelector(".home");
 const welcomeText = document.querySelector(".home .welcome-text");
 const navbar = document.querySelector(".navbar");
 const nav_links = document.querySelectorAll(".navbar .menu li a");
@@ -21,6 +22,9 @@ const updateBurgerIcon = () => {
 // on load
 window.onload = (event) => {
    welcomeText.style.opacity = 1;
+   setTimeout(() => {
+      welcomeText.style.opacity = 0.5;
+   }, 6000);
 };
 
 // hamburger on-click

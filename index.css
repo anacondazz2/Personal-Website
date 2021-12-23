@@ -146,8 +146,10 @@ body::-webkit-scrollbar-thumb {
 /* HOME */
 .home {
    height: 100%;
-   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-      url(./images/space-elevator.jpg) no-repeat fixed center;
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(./images/grassy-shore.jpg) no-repeat fixed center;
+   /* background-image: linear-gradient(rgba(37, 187, 182, 0.4), rgba(243, 26, 26, 0.4));
+   background-image: url(./images/grassy-shore.jpg); */
    background-size: cover;
 }
 .word-program {
