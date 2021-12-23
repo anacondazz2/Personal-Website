@@ -190,6 +190,7 @@ body::-webkit-scrollbar-thumb {
    left: 22vw;
    bottom: -30px;
    transform: rotate(-15deg);
+   draggable: 
 }
 .about-1 .grub {
    position: absolute;
