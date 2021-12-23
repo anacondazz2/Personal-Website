@@ -146,8 +146,8 @@ body::-webkit-scrollbar-thumb {
 /* HOME */
 .home {
    height: 100%;
-   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-      url(./images/synth_adventure.jpg) no-repeat fixed center;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+      url(./images/space-elevator.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
