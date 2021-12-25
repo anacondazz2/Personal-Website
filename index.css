@@ -436,10 +436,6 @@ body::-webkit-scrollbar-thumb {
       margin-bottom: 8px;
       padding: 8px;
    }
-   .contact-1 form button {
-      font-size: 11px;
-      padding: 10px;
-   }
 }
 @media (max-width: 550px) {
    .hamburger.fas {
@@ -477,9 +473,14 @@ body::-webkit-scrollbar-thumb {
    .home .welcome-text {
       font-size: 35px;
    }
+   .contact-1 form button {
+      font-size: 12px;
+      padding: 9px;
+      border-radius: 15px;
+   }
    .contact-2 div {
       /*each contact item*/
-      font-size: 12px;
+      font-size: 15px;
       padding: 7px;
       border-radius: 7px;
       background-color: rgba(102, 55, 55, 0.4);
@@ -487,9 +488,9 @@ body::-webkit-scrollbar-thumb {
       margin-bottom: 11px;
    }
    .contact-2 .social-media i {
-      font-size: 12px;
+      font-size: 15px;
    }
    .contact .art-credit {
-      font-size: 10px;
+      font-size: 15px;
    }
 }
