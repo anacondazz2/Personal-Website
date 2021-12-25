@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
-   --dark-grey: rgb(51, 51, 51);
+   --grey: rgb(51, 51, 51);
    --blue: rgb(82, 200, 246);
    --yellow: rgb(255, 242, 0);
    --orange: #ff6a00;
@@ -16,7 +16,7 @@
    padding: 0;
    box-sizing: border-box;
    text-decoration: none;
-   font-family: "Roboto Mono", "Ubuntu", monospace, sans-serif;
+   font-family: "Roboto Mono", monospace, sans-serif;
 }
 html {
    height: 100%;
@@ -159,7 +159,7 @@ body::-webkit-scrollbar-thumb {
 .about {
    padding-top: 60px;
    padding-bottom: 60px;
-   background-color: var(--dark-grey);
+   background-color: var(--grey);
    border-top: 5px solid black;
    position: relative;
 }
@@ -296,6 +296,8 @@ body::-webkit-scrollbar-thumb {
 .contact-1 form textarea {
    resize: none;
    max-height: 200px;
+   resize: vertical;
+   max-height: 150px;
 }
 .contact-1 button {
    font-size: 15px;
