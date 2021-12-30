@@ -1,4 +1,3 @@
-// grab needed elements
 const html = document.querySelector("html");
 const home = document.querySelector(".home");
 const welcomeText = document.querySelector(".home .welcome-text");
@@ -7,7 +6,6 @@ const nav_links = document.querySelectorAll(".navbar .menu li a");
 const navbarMenu = document.querySelector(".navbar .menu");
 const hamburger = document.querySelector(".navbar .hamburger.fas");
 
-// functions
 const atEndOfPage = () => {
    return (
       Math.abs(html.scrollHeight - html.scrollTop - html.clientHeight) <= 3.0
