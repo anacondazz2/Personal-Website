@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
 .home {
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/hk-standing.jpg) no-repeat fixed center;
+      url(./images/wallpapers/synth.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
