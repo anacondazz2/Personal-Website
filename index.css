@@ -119,7 +119,7 @@ body::-webkit-scrollbar-thumb {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: limegreen;
+   color: rgb(255, 123, 145);
 }
 .hamburger.fas {
    font-size: 20px;
@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
 .home {
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/synth.jpg) no-repeat fixed center;
+      url(./images/wallpapers/hk-standing.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
@@ -272,7 +272,7 @@ body::-webkit-scrollbar-thumb {
    position: relative; /* for art credit abs positioning */
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/fantasy.jpg) fixed center center;
+      url(./images/wallpapers/sombre.jpg) fixed center center;
    background-size: cover;
 }
 .contact-wrapper {
