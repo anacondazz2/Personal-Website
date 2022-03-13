@@ -272,7 +272,7 @@ body::-webkit-scrollbar-thumb {
    position: relative; /* for art credit abs positioning */
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/sombre.jpg) fixed center center;
+      url(./images/wallpapers/fantasy.jpg) fixed center center;
    background-size: cover;
 }
 .contact-wrapper {
