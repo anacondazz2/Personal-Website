@@ -153,7 +153,7 @@ body::-webkit-scrollbar-thumb {
    background-size: cover;
 }
 .word-program {
-   color: var(--orange);
+   color: limegreen;
    font-weight: 600;
 }
 
