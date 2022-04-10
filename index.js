@@ -16,7 +16,6 @@ const updateBurgerIcon = () => {
       ? "hamburger fas fa-times" // 'x' close button
       : "hamburger fas fa-bars"; // triple bar menu button
 };
-{{{}{{}}}}
 
 // on load
 window.onload = (event) => {

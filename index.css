@@ -4,14 +4,15 @@
 :root {
    --dark-navy: rgb(30, 35, 42);
    --dark-navy-values: 30, 35, 42;
-   --dark-magenta: rgb(65, 54, 60); 
+   --dark-magenta: rgb(65, 54, 60);
+   --dark: rgb(45, 46, 58);
    --light: rgb(230, 230, 230);
    --grey: rgb(51, 51, 51);
    --blue: rgb(82, 200, 246);
    --yellow: rgb(255, 242, 0);
    --orange: rgb(255, 106, 0);
    --pink: rgb(250, 161, 161);
-   --kvacpurp: rgb(216, 97, 255);
+   --purple: rgb(216, 97, 255);
 }
 * {
    margin: 0;
@@ -119,7 +120,7 @@ body::-webkit-scrollbar-thumb {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: lightskyblue;
+   color: limegreen;
 }
 .hamburger.fas {
    font-size: 20px;
@@ -319,15 +320,15 @@ body::-webkit-scrollbar-thumb {
    padding: 13px;
    border-style: none;
    border-radius: 20px;
-   border: 2px solid white;
+   border: 2px solid limegreen;
    background-color: rgba(0, 0, 0, 0.4);
    color: white;
    transition: all 0.5s ease;
 }
 .contact-1 button:hover {
    color: black;
-   background-color: rgba(255, 255, 255, 0.882);
-   cursor: pointer;
+   background-color: limegreen;
+   cursor: pointer;  
 }
 .contact-2 {
    position: absolute;
@@ -483,7 +484,7 @@ body::-webkit-scrollbar-thumb {
       height: 180px;
    }
 }
-@media (max-width: 481px), (max-height: 730px) {
+@media (max-width: 481px), (max-height: 481px) {
    /* phones */
    .header {
       font-size: 32px;
