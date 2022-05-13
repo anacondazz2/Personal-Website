@@ -1,18 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
 
 :root {
+   --dark: rgb(45, 46, 58);
+   --light: rgb(230, 230, 230);
    --dark-navy: rgb(30, 35, 42);
    --dark-navy-values: 30, 35, 42;
    --dark-magenta: rgb(65, 54, 60);
-   --dark: rgb(45, 46, 58);
-   --light: rgb(230, 230, 230);
    --grey: rgb(51, 51, 51);
    --blue: rgb(82, 200, 246);
    --yellow: rgb(255, 242, 0);
    --orange: rgb(255, 106, 0);
    --pink: rgb(250, 161, 161);
    --purple: rgb(216, 97, 255);
+   --brown: rgb(164, 86, 57);
 }
 * {
    margin: 0;
@@ -27,7 +28,7 @@ html {
 }
 body {
    height: 100%;
-   background-color: black;
+   background-color: var(--dark);
 }
 body::-webkit-scrollbar {
    width: 15px;
@@ -39,8 +40,11 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
    background-color: grey;
 }
+body::-webkit-scrollbar-thumb:active {
+   background-color: rgb(88, 88, 88);
+}
 :target {
-   scroll-margin-top: 70px;
+   scroll-margin-top: 60px;
 }
 ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -104,7 +108,6 @@ body::-webkit-scrollbar-thumb {
    padding: 30px 30px;
    position: fixed;
    display: flex;
-   justify-content: space-between;
    align-items: center;
    z-index: 999;
    transition: padding 0.3s ease, background-color 0.3s ease;
@@ -120,7 +123,7 @@ body::-webkit-scrollbar-thumb {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: limegreen;
+   color: var(--orange);
 }
 .hamburger.fas {
    font-size: 20px;
@@ -150,7 +153,7 @@ body::-webkit-scrollbar-thumb {
 .home {
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/hk-standing.jpg) no-repeat fixed center;
+      url(./images/wallpapers/fantasy.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
@@ -227,14 +230,16 @@ body::-webkit-scrollbar-thumb {
 }
 .projects-container {
    display: grid;
-   grid-template-columns: 22vw 22vw 22vw;
-   grid-gap: 35px;
+   grid-template-columns: 250px 250px 250px;
+   grid-gap: 10px;
+   justify-items: center;
+   align-items: center;
 }
 .projects-container a {
    position: relative; /*needed for figcaption absolute positioning*/
    height: max-content;
 }
-.projects-container img {
+.projects-container img {  
    max-width: 100%;
    border-radius: 25px;
    padding: 2px; /* fake border */
@@ -273,7 +278,7 @@ body::-webkit-scrollbar-thumb {
    position: relative; /* for art credit abs positioning */
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/sombre.jpg) fixed center center;
+      url(./images/wallpapers/fantasy.jpg) fixed center center;
    background-size: cover;
 }
 .contact-wrapper {
@@ -320,14 +325,14 @@ body::-webkit-scrollbar-thumb {
    padding: 13px;
    border-style: none;
    border-radius: 20px;
-   border: 2px solid limegreen;
-   background-color: rgba(0, 0, 0, 0.4);
+   border: 3px solid black;
+   background-color: rgba(0, 0, 0, 0.146);
    color: white;
    transition: all 0.5s ease;
 }
 .contact-1 button:hover {
-   color: black;
-   background-color: limegreen;
+   color: white;
+   background-color: black;
    cursor: pointer;  
 }
 .contact-2 {
@@ -346,7 +351,7 @@ body::-webkit-scrollbar-thumb {
    font-size: 22px;
    padding: 10px;
    border-radius: 10px;
-   background-color: rgba(0, 0, 0, 0.4);
+   background-color: rgba(0, 0, 0, 0.57);
    color: white;
    margin-bottom: 10px;
 }
@@ -391,7 +396,7 @@ body::-webkit-scrollbar-thumb {
    color: #2867b2;
 }
 .contact .art-credit {
-   display: none;
+   /* display: none; */
    position: absolute;
    writing-mode: vertical-lr;
    text-orientation: mixed;
@@ -406,7 +411,7 @@ body::-webkit-scrollbar-thumb {
    transition: all 0.5s ease;
 }
 .contact .art-credit a:hover {
-   color: var(--kvacpurp);
+   color: var(--purple);
    text-decoration: underline;
 }
 
