@@ -425,14 +425,6 @@ body::-webkit-scrollbar-thumb:active {
    .navbar {
       padding: 15px 20px;
    }
-   /* make proje  cts bigger */
-   .projects-container {
-      grid-template-columns: 29vw 29vw 29vw;
-   }
-   /* wrap projects */
-   .projects-container {
-      grid-template-columns: 35vw 35vw;
-   }
 }
 @media (max-width: 769px) {
    /* tablets and laptops */
@@ -452,7 +444,7 @@ body::-webkit-scrollbar-thumb:active {
    /* further wrap projects */
    .projects-container {
       align-items: center;
-      grid-template-columns: 50vw;
+      grid-template-columns: 200px 200px;
    }
    .contact-1 form .input {
       width: 70vw;
@@ -487,6 +479,10 @@ body::-webkit-scrollbar-thumb:active {
    .navbar .menu.dropdown {
       border-top: 5px solid rgba(255, 255, 255, 0.75);
       height: 180px;
+   }
+   .projects-container {
+      align-items: center;
+      grid-template-columns: 200px;
    }
 }
 @media (max-width: 481px), (max-height: 481px) {
