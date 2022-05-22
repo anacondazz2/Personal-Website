@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb:active {
    justify-content: center;
 }
 .welcome-text {
-   font-size: 50px;
+   font-size: 60px;
    font-weight: 450;
    text-align: center;
    color: white;
@@ -304,16 +304,18 @@ body::-webkit-scrollbar-thumb:active {
    align-items: center;
 }
 .contact-1 form .input {
+   font-family: "Inter";
    width: 600px;
    font-size: 17px;
    border-radius: 20px;
    border-style: none;
    margin-bottom: 10px;
    padding: 15px;
-   background-color: rgba(255, 255, 255, 0.3);
+   background-color: rgba(255, 255, 255, 0.514);
    color: black;
 }
 .contact-1 form textarea {
+   font-family: "Inter";
    resize: none;
    max-height: 200px;
    resize: vertical;
@@ -325,14 +327,14 @@ body::-webkit-scrollbar-thumb:active {
    padding: 13px;
    border-style: none;
    border-radius: 20px;
-   border: 3px solid black;
+   border: 3px solid var(--orange);
    background-color: rgba(0, 0, 0, 0.146);
    color: white;
    transition: all 0.5s ease;
 }
 .contact-1 button:hover {
-   color: white;
-   background-color: black;
+   color: black;
+   background-color: var(--orange);
    cursor: pointer;  
 }
 .contact-2 {
