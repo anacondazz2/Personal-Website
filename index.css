@@ -153,7 +153,7 @@ body::-webkit-scrollbar-thumb:active {
 .home {
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/fantasy.jpg) no-repeat fixed center;
+      url(./images/wallpapers/data-visualization.jpg) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
@@ -278,7 +278,7 @@ body::-webkit-scrollbar-thumb:active {
    position: relative; /* for art credit abs positioning */
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/fantasy.jpg) fixed center center;
+      url(./images/wallpapers/data-visualization.jpg) fixed center center;
    background-size: cover;
 }
 .contact-wrapper {
@@ -327,7 +327,7 @@ body::-webkit-scrollbar-thumb:active {
    padding: 13px;
    border-style: none;
    border-radius: 20px;
-   border: 3px solid var(--orange);
+   border: 2px solid var(--orange);
    background-color: rgba(0, 0, 0, 0.146);
    color: white;
    transition: all 0.5s ease;
