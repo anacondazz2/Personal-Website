@@ -74,7 +74,7 @@ body::-webkit-scrollbar-thumb:active {
    justify-content: center;
 }
 .flex-col-center {
-   display: flex;
+   display: flex; 
    flex-direction: column;
    align-items: center;
    justify-content: center;
@@ -166,7 +166,7 @@ body::-webkit-scrollbar-thumb:active {
    padding-top: 60px;
    padding-bottom: 60px;
    background-color: var(--dark);
-   border-top: 5px solid black;
+   border-top: 4px solid gray;
    position: relative;
 }
 .about-container {
@@ -211,8 +211,8 @@ body::-webkit-scrollbar-thumb:active {
    padding-top: 60px;
    padding-bottom: 60px;
    background-color: var(--dark);
-   border-top: 5px solid black;
-   border-bottom: 5px solid black;
+   border-top: 4px solid gray;
+   border-bottom: 4px solid gray;
    position: relative;
    z-index: 1;
 }
