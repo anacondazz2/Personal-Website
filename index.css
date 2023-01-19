@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb:active {
    background-color: rgb(88, 88, 88);
 }
 :target {
-   scroll-margin-top: 60px;
+   /* scroll-margin-top: 60px; */
 }
 ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -439,7 +439,7 @@ body::-webkit-scrollbar-thumb:active {
    .navbar .menu li a {
       font-size: 16px;
    }
-   /* center project headers */
+   /* center projects */
    .project-wrapper {
       align-items: center;
    }
