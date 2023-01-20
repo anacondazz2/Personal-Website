@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb:active {
    background-color: rgb(88, 88, 88);
 }
 :target {
-   /* scroll-margin-top: 60px; */
+   /* scroll-margin-top: 60px; yo*/
 }
 ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */
