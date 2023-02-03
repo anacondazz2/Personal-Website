@@ -264,7 +264,7 @@ body::-webkit-scrollbar-thumb:active {
    opacity: 0;
    transition: all 0.5s ease;
 }
-.projects-container figcaption h3 {
+.projects-container figcaption .project-title {
    display: inline-block;
    padding: 10px;
    margin-bottom: 8px;
