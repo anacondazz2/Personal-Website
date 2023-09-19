@@ -152,8 +152,8 @@ body::-webkit-scrollbar-thumb:active {
 /* HOME */
 .home {
    height: 100%;
-   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/data-visualization.jpg) no-repeat fixed center;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(./images/wallpapers/chongqing.JPG) no-repeat fixed center;
    background-size: cover;
 }
 .word-program {
@@ -197,6 +197,13 @@ body::-webkit-scrollbar-thumb:active {
    left: 22vw;
    bottom: -30px;
    transform: rotate(-15deg);
+}
+.about-1 .aatrox {
+   position: absolute;
+   width: 180px;
+   max-width: 100%;
+   left: 50vw - 90px;
+   bottom: -140px;
 }
 .about-1 .grub {
    position: absolute;
@@ -278,7 +285,7 @@ body::-webkit-scrollbar-thumb:active {
    position: relative; /* for art credit abs positioning */
    height: 100%;
    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-      url(./images/wallpapers/data-visualization.jpg) fixed center center;
+      url(./images/wallpapers/qionglai-resort.JPG) fixed center center;
    background-size: cover;
 }
 .contact-wrapper {
