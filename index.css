@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap');
 
 :root {
    --dark: rgb(45, 46, 58);
@@ -19,8 +18,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   text-decoration: none;
-   font-family: "Roboto Mono", monospace, sans-serif;
+   font-family: "Shantell Sans", sans-serif;
 }
 html {
    height: 100%;
@@ -44,7 +42,7 @@ body::-webkit-scrollbar-thumb:active {
    background-color: rgb(88, 88, 88);
 }
 :target {
-   /* scroll-margin-top: 60px; yo*/
+   /* scroll-margin-top: 60px;*/
 }
 ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -60,7 +58,7 @@ body::-webkit-scrollbar-thumb:active {
    color: black;
 }
 ::selection {
-   color: var(--purple);
+   color: var(--blue);
    background-color: black;
 }
 
@@ -123,7 +121,7 @@ body::-webkit-scrollbar-thumb:active {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: var(--purple);
+   color: var(--blue);
 }
 .hamburger.fas {
    font-size: 20px;
@@ -181,14 +179,6 @@ body::-webkit-scrollbar-thumb:active {
    font-size: 18px;
    max-width: 80vw;
    margin-bottom: 130px;
-}
-.about-1 li a {
-   color: white;
-   transition: all 0.4s ease;
-}
-.about-1 li a:hover {
-   color: var(--blue);
-   text-decoration: underline;
 }
 .about-1 .thumbs-up {
    position: absolute;
@@ -311,7 +301,6 @@ body::-webkit-scrollbar-thumb:active {
    align-items: center;
 }
 .contact-1 form .input {
-   font-family: "Inter";
    width: 600px;
    font-size: 17px;
    border-radius: 20px;
@@ -322,7 +311,6 @@ body::-webkit-scrollbar-thumb:active {
    color: black;
 }
 .contact-1 form textarea {
-   font-family: "Inter";
    resize: none;
    max-height: 200px;
    resize: vertical;
@@ -420,7 +408,7 @@ body::-webkit-scrollbar-thumb:active {
    transition: all 0.5s ease;
 }
 .contact .art-credit a:hover {
-   color: var(--purple);
+   color: var(--blue);
    text-decoration: underline;
 }
 
