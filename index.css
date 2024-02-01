@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
 
 :root {
    --dark: rgb(45, 46, 58);
@@ -6,7 +7,7 @@
    --dark-navy: rgb(30, 35, 42);
    --dark-navy-values: 30, 35, 42;
    --dark-magenta: rgb(65, 54, 60);
-   --grey: rgb(51, 51, 51);
+   --grey: rgb(205, 205, 205);
    --blue: rgb(82, 200, 246);
    --yellow: rgb(255, 242, 0);
    --orange: rgb(255, 106, 0);
@@ -18,7 +19,8 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: "Shantell Sans", sans-serif;
+   font-family: "Merriweather", "Shantell Sans", sans-serif;
+   font-weight: 600;
 }
 html {
    height: 100%;
@@ -58,7 +60,7 @@ body::-webkit-scrollbar-thumb:active {
    color: black;
 }
 ::selection {
-   color: var(--blue);
+   color: var(--grey);
    background-color: black;
 }
 
@@ -121,7 +123,7 @@ body::-webkit-scrollbar-thumb:active {
    color: white;
 }
 .navbar .menu li a:hover {
-   color: var(--blue);
+   color: var(--grey);
 }
 .hamburger.fas {
    font-size: 20px;
@@ -408,7 +410,7 @@ body::-webkit-scrollbar-thumb:active {
    transition: all 0.5s ease;
 }
 .contact .art-credit a:hover {
-   color: var(--blue);
+   color: var(--grey);
    text-decoration: underline;
 }
 
