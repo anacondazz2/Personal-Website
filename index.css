@@ -7,7 +7,7 @@
    --dark-navy: rgb(30, 35, 42);
    --dark-navy-values: 30, 35, 42;
    --dark-magenta: rgb(65, 54, 60);
-   --grey: rgb(205, 205, 205);
+   --grey: rgb(163, 163, 163);
    --blue: rgb(82, 200, 246);
    --yellow: rgb(255, 242, 0);
    --orange: rgb(255, 106, 0);
@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 ::selection {
    color: var(--grey);
-   background-color: black;
+   background-color: transparent;
 }
 
 /* REUSABLES */
